@@ -14,7 +14,7 @@
 
 		<div class="panel panel-default">
 					                <div class="panel-heading">
-					                	<h6 class="panel-title"><i class="fas fa-chalkboard-teacher"></i>QUẢN LÝ LOẠI CÂU HỎI</h6></div>
+					                	<h6 class="panel-title"><i class="fas fa-chalkboard-teacher"></i>DANH SÁCH LOẠI CÂU HỎI</h6></div>
 					                <div class="datatable">
 					                	@if(session('thongbao'))
 											<div class="alert alert-success">

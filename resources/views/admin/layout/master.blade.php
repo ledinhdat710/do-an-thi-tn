@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from demo.interface.club/londinium/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Oct 2017 04:29:02 GMT -->
+
+<!-- SỬA PHẦN GIÁO VIÊN Mirrored from demo.interface.club/londinium/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Oct 2017 04:29:02 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="utf-8">
@@ -102,8 +103,8 @@
 	<!-- Navbar -->
 	<div class="navbar navbar-inverse" role="navigation" style="background-color: #213351;margin-top: -20px">
 		<div class="navbar-header">
-            <a class="navbar-brand" href="{{asset('giaovien/dash/dashbroad_gv')}}" style="font-size: 18px"><img src="../../imgs/quochuy.gif" alt="" width="50" height="50" style="margin-top: -10px;margin-right:8px;display: inline;">
-               Hệ thống thi trắc nghiệm trường THPT Nam Khoái Châu</a>
+            <a class="navbar-brand" href="{{asset('giaovien/dash/dashbroad_gv')}}" style="font-size: 18px"><img src="../../imgs/eduwhite1.png" alt="" width="120"  style="margin-top: -4px;margin-right:8px;display: inline;">
+               Hệ thống quản lý thi trắc nghiệm</a>
 			
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-icons">
 				<span class="sr-only">Toggle navbar</span>
@@ -329,7 +330,7 @@
 				<!-- Main navigation -->
 				<ul class="navigation">
 					
-						<li class="active"><a href="{{asset('dashbroad_gv')}}"><span>Dashboard</span> <i class="icon-screen2"></i></a></li>
+						<li class="active"><a href="{{asset('giaovien/dash/dashbroad_gv')}}"><span>Dashboard</span> <i class="icon-screen2"></i></a></li>
 						
 						<li>
 							<a href=""><span>Loại câu hỏi</span> <i class="fas fa-question"></i></a>
@@ -380,11 +381,11 @@
 							
 						</li>
 						
-						<li><a href="{{asset('giaovien/dash/dashbroad_gv')}}"><span>Biểu đồ</span> <i class="icon-bars"></i></a></li>
+						<!--<li><a href="{{asset('giaovien/dash/dashbroad_gv')}}"><span>Biểu đồ</span> <i class="icon-bars"></i></a></li>
 						<li>
 							<a href="#"><span>Cài đặt</span> <i class="fas fa-cog"></i></a>
 						
-						</li>
+						</li>-->
 						
 						
 					
