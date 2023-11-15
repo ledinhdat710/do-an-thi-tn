@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Thi Trực Tuyến</title>
+	<title>Đăng nhập</title>
 	<link rel="stylesheet" href="{{ url('css/trangdangnhap.css')}}">
 </head>
 <body>
@@ -26,12 +26,12 @@
 			
 		
 			<button type="submit" class="btnlogin">
-					 <span class="btn-text"> Log in</span> 
+					 <span class="btn-text"> Đăng nhập</span> 
 			</button> 
 			
 		</a>
 
-		<a href="" class="for-pass">Forgot password </a>
+		<a href="" class="for-pass">Quên mật khẩu? </a>
 	</div>
 	</form>
 </body>

@@ -39,10 +39,10 @@
 		</div>
 		<div class="menu-ngang" >
 			<div class="row"  data-spy="affix" data-offset-top="85">
-	
+				<div class="col-md-1"></div>
 				<div class="col-md-2">
 					<a href="{{url('trangchu') }}">
-						<img src="{{asset('imgs/EDUQIZZ.png') }}"style="width:100px;" alt="">
+						<img src="{{asset('imgs/eduquizz1.png') }}"style="width:150px; margin-top: 10px;display: inline;" alt="">
 					</a>
 					
 				</div>
