@@ -5,7 +5,7 @@
 	<title>Document</title>
 	<style>
 		body{
-			background-image: url(../../../public/imgs/bg_login.jpg);
+			/*background-image: url(../../../public/imgs/bg_login.jpg);
 			/*-webkit-background-size:cover;
 			background-size: cover;
 			background-position: center center;*/

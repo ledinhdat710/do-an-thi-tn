@@ -3,14 +3,14 @@
 
 <div class="menu-top">
 					<div class="row">
-						<div class="col-md-1"></div>
-						<div class="col-md-1 doc">
+						
+						<div class="col-md-1 doc"style="width:150px;">
 							<p class="add"><i class="fas fa-map"></i> ADDRESS</p>
-							<p class="diachi">Hưng Yên</p>
+							<p class="diachi">Hà Nội </p>
 						</div>
-						<div class="col-md-1 doc" >
+						<div class="col-md-1 doc" style="width:150px;">
 							<p class="add"><i class="fas fa-envelope-open"></i> EMAIL</p>
-							<p class="diachi a"  >thao@gmail.com </p>
+							<p class="diachi a"  >Eduquizz@gmail.com </p>
 						</div>
 						<div class="col-md-1 doc">
 							<p class="add"><i class="fas fa-phone"></i> CONTACT</p>
@@ -27,41 +27,41 @@
 								
 							</div>
 						</div>
-						<div class="col-md-2">
+						<div class="col-md-2" style="float:right;">
 							@if(Auth::check() && Auth::user()->quyen==0)
-								<a href="{{url('dangxuat')}}"><div class="login"><i class="fas fa-sign-out-alt"></i> Logout</div></a>
+								<a href="{{url('dangxuat')}}"><div class="login"style="width: 120px;"><i class="fas fa-sign-out-alt"></i> Đăng xuất</div></a>
 							@else
 						
-								<a href="{{url('dangnhap')}}"><div class="login "><i class="fas fa-user"></i> Login</div></a>
+								<a href="{{url('dangnhap')}}"><div class="login "style="width: 120px;"><i class="fas fa-user"></i> Đăng nhập</div></a>
 							@endif
 						</div>
 					</div>
 		</div>
 		<div class="menu-ngang" >
 			<div class="row"  data-spy="affix" data-offset-top="85">
-				<div class="col-md-1"></div>
+	
 				<div class="col-md-2">
 					<a href="{{url('trangchu') }}">
-						<img src="{{asset('imgs/logo.png') }}" alt="">
+						<img src="{{asset('imgs/EDUQIZZ.png') }}"style="width:100px;" alt="">
 					</a>
 					
 				</div>
 				<div class="col-md-9 ngang">
 					<ul>
 						<li><a href="{{url('trangchu') }}">TRANG CHỦ </a> </li>
-						<li><a href="{{url('gioithieu')}}">GIỚI THIỆU </a></li>
+						
 						
 						<li>
 							 <div class="dropdown">
 							   
-							    	<a href="" class="dropdown-toggle" data-toggle="dropdown">KỲ THI </a>
+							    	<a href="" class="dropdown-toggle" data-toggle="dropdown">ĐỀ THI </a>
 							    <span class="caret"></span>
 							    <ul class="dropdown-menu down_menu">
 							      <li>
 							      	<a href="{{url('thithptquocgia')}}" ><span>Ôn thi THPT Quốc Gia</span> <i class="fas fa-angle-right ic1"></i></a>
 							      </li>
 							      <li>
-							      	<a href="{{url('thihocki')}}"><span>Kiểm tra học kì </span><i class="fas fa-angle-right ic2"> </i></a>
+							      	<a href="{{url('thihocki')}}"><span>Kiểm tra học kỳ </span><i class="fas fa-angle-right ic2"> </i></a>
 							      </li>
 							      <li>
 							      	<a href="{{url('kt15phut')}}"><span>Kiểm tra 15 phút</span> <i class="fas fa-angle-right ic3"> </i></a>
@@ -109,9 +109,10 @@
 
 						
 						<li><a href="{{url('tintuc')}}">TIN TỨC </a></li>
-						<li><a href="{{url('lienhe')}}">LIÊN HỆ </a></li>
+						<!--<li><a href="{{url('lienhe')}}">LIÊN HỆ </a></li>-->
+						<li><a href="{{url('gioithieu')}}">GIỚI THIỆU </a></li>
 						<!-- <li><input type="text" class="timkiem" placeholder="  Tìm kiếm"> <i class="fas fa-search"></i></li> -->
-						<li>
+						<li style="float:right;">
 							<form  method="get" id="searchform" action="search">
 								<div class="email-box">
 									<i class="fas fa-search"></i>
