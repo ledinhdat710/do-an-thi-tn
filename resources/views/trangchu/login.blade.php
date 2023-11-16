@@ -110,7 +110,7 @@
 		<div class="img-area">
 			<img src="../../../public/imgs/login-icon.png" alt="">
 		</div>
-		<h2>Đăng Nhập</h2>
+		<h2>Đăng Nhập </h2>
 		<p>Tên tài khoản: </p>
 		<input type="text">
 		<p>Mật khẩu: </p>
