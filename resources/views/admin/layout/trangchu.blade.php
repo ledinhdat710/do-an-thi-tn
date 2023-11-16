@@ -12,7 +12,7 @@
 					</div>
 					<p class="canbtn">
 						<a href="dangnhap"><span class="view">ĐĂNG NHẬP</span></a>
-						<a href="trangchu"><span class="thamgia">ĐĂNG KÝ</span></a>
+						<a href="dangky"><span class="thamgia">ĐĂNG KÝ</span></a>
 					</p>
 				</div>
 			</div>

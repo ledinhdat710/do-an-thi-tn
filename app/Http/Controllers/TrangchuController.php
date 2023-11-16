@@ -71,6 +71,9 @@ class TrangchuController extends Controller
     public function getdangnhap(Request $req){
     	return view('admin.layout.dangnhap');
     }
+    public function getdangky(Request $req){ //Thêm hàm get đăng ký
+    	return view('admin.layout.dangky');
+    }
 
     public function postdangnhap(Request $req){
     	$this->validate($req,
@@ -86,6 +89,7 @@ class TrangchuController extends Controller
     			'password.max'=>'Mật khẩu không quá 20 ký tự'
     		]
     	);
+      
         //email và pass do ng dùng nhập lấy theo name input
     	$chungthuc =  array('email' => $req->email , 'password'=> $req->password );  
     	if(Auth::attempt($chungthuc)){
@@ -101,7 +105,34 @@ class TrangchuController extends Controller
     		return redirect()->back()->with(['flag'=>'danger','message','Đăng nhập không thành công']);
     	}
     }
-
+    public function postdangky(Request $req){
+      $this->validate($req,
+        [
+          'email'=>'required|email', //require: k đc rỗng, email: định dạng email
+          'password'=>'required|min:6|max:20'
+        ],
+        [
+          'email.required'=>'Vui lòng nhập email',
+          'email.email'=>'Email không đúng định dạng',
+          'password.required'=>'Vui lòng nhập mật khẩu',
+          'password.min'=>'Mật khẩu ít nhất 6 ký tự',
+          'password.max'=>'Mật khẩu không quá 20 ký tự'
+        ]
+      );
+      $chungthuc =  array('email' => $req->email , 'password'=> $req->password );  
+    	if(Auth::attempt($chungthuc)){
+            if(Auth::user()->quyen == '0')
+                return redirect('trangchu');
+    		 if (Auth::user()->quyen == '1')
+             return redirect('giaovien/dash/dashbroad_gv');
+            if (Auth::user()->quyen == '2')
+                 return redirect('dashbroad_ad');
+            
+    	}
+    	else{
+    		return redirect()->back()->with(['flag'=>'danger','message','Đăng nhập không thành công']);
+    	}
+    }
 
     public function postdangxuat(){
         Auth::logout();
