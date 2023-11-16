@@ -546,6 +546,7 @@ login*{
 	margin-top: 10px;
 	margin-bottom: 30px;
 	box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
 }
 
 .hinhanh{
@@ -553,6 +554,7 @@ login*{
 }
 .dethi img{
 	margin-left: -10px;
+	border-radius: 10px;
 	
 }
 

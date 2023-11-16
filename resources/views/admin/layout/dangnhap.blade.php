@@ -20,7 +20,7 @@
 		<div class="img-area">
 			<img src="imgs/login-icon.png" alt="">
 		</div>
-		<h2>Đăng Nhập</h2>
+		<h2>ĐĂNG NHẬP</h2>
 		<p>Email: </p>
 		<input type="email" name="email" required="">
 		<p>Mật khẩu: </p>

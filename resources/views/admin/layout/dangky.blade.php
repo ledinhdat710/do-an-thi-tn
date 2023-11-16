@@ -1,10 +1,11 @@
 @extends('admin.layout.index')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Đăng ký</title>
-	<link rel="stylesheet" href="{{ url('css/trangdangnhap.css')}}">
+	<link rel="stylesheet" href="{{ url('css/trangdangky.css')}}">
 </head>
 
 @section('body')
@@ -19,25 +20,25 @@
 		<div class="img-area">
 			<img src="imgs/login-icon.png" alt="">
 		</div>
-        <h2><i class="fa fa-edit"></i>ĐĂNG KÝ</h2>
+        <h2>ĐĂNG KÝ</h2>
         
         
         <tr class="tbl">
 		   
 
-			<td class="style_row"><i class="fa fa-edit"></i> &nbsp; &nbsp;Tên Người Dùng</td>
+			<p> &nbsp; &nbsp;Tên Người Dùng</p>
 							<td><input type="text" required="" class="from-control nhaploai" placeholder="  Nhập tên người dùng" name="tenuser" />
 							
 							</td>
 						</tr>
                         <tr class="tbl">
-							<td class="style_row"><i class="fa fa-edit"></i> &nbsp; &nbsp;Hình ảnh</td>
+							<p> &nbsp; &nbsp;Hình ảnh</p>
 							<td><input type="file" class="from-control "  name="hinhanh" />
 							
 							</td>
 						</tr>
                         <tr class="tbl">
-							<td class="style_row"><i class="fa fa-edit"></i> &nbsp; &nbsp;Giới tính</td>
+							<p> &nbsp; &nbsp;Giới tính</p>
 							<td>
 								<select name="gioitinh" id="tenloaich" class="form-control nhaploai">
 	                                <option value="Nữ"> Nữ</option>
@@ -47,34 +48,40 @@
                             <p></p>
 						</tr>
                         <tr class="tbl">
-							<td class="style_row"><i class="fa fa-edit"></i> &nbsp; &nbsp;Địa chỉ</td>
+							<p> &nbsp; &nbsp;Địa chỉ</p>
 							<td><input type="text" class="from-control nhaploai" placeholder="  Nhập địa chỉ" name="tenloai" />
 							
 							</td>
 						</tr>
 
 						<tr class="tbl">
-							<td class="style_row"><i class="fa fa-edit"></i> &nbsp; &nbsp;Số điện thoại</td>
+							<p> &nbsp; &nbsp;Số điện thoại</p>
 							<td><input type="text" class="from-control nhaploai" placeholder="  Nhập số điện thoại" name="tenloai" />
 							
 							</td>
 						</tr>
 						<tr class="tbl">
-							<td class="style_row"><i class="fa fa-edit"></i> &nbsp; &nbsp;Email</td>
+							<p> &nbsp; &nbsp;Email</p>
 							<td><input type="email" required="" class="from-control nhaploai" placeholder="  Nhập email" name="email" />
 							
 							</td>
 						</tr>
 
 						<tr class="tbl">
-							<td class="style_row"><i class="fa fa-edit"></i> &nbsp; &nbsp;Mật Khẩu</td>
+							<p> &nbsp; &nbsp;Mật Khẩu</p>
 							<td><input type="password" required="" class="from-control nhaploai" placeholder="  Nhập password" name="password"/>
+							
+							</td>
+						</tr>
+						<tr class="tbl">
+							<p> &nbsp; &nbsp;Nhập lại mật khẩu:</p>
+							<td><input type="password" required="" class="from-control nhaploai" placeholder="Nhập lại mật khẩu" name="password"/>
 							
 							</td>
 						</tr>
 
 						<tr class="tbl">
-							<td class="style_row"><i class="fa fa-edit"></i> &nbsp; &nbsp;Đối tượng</td>
+							<p> &nbsp; &nbsp;Đối tượng</p>
 							<td>
 								<select name="quyen" id="tenloaich" class="form-control nhaploai">
 							
@@ -115,4 +122,5 @@
 			</button> 
 	</form>
 </body>
+@stop
 </html>
