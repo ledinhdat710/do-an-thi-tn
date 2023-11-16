@@ -1,3 +1,6 @@
+@extends('admin.layout.index')
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +8,7 @@
 	<title>Đăng nhập</title>
 	<link rel="stylesheet" href="{{ url('css/trangdangnhap.css')}}">
 </head>
+@section('body')	
 <body>
 	<div style="color: #fff">
 		@if(Session::has('flag'))
@@ -35,4 +39,5 @@
 	</div>
 	</form>
 </body>
+@stop
 </html>

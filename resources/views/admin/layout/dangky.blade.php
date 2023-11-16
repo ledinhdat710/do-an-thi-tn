@@ -1,3 +1,4 @@
+@extends('admin.layout.index')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +6,8 @@
 	<title>Đăng ký</title>
 	<link rel="stylesheet" href="{{ url('css/trangdangnhap.css')}}">
 </head>
+
+@section('body')
 <body>
 	<div style="color: #fff">
 		@if(Session::has('flag'))
@@ -71,7 +74,7 @@
 						</tr>
 
 						<tr class="tbl">
-							<td class="style_row"><i class="fa fa-edit"></i> &nbsp; &nbsp;Quyền</td>
+							<td class="style_row"><i class="fa fa-edit"></i> &nbsp; &nbsp;Đối tượng</td>
 							<td>
 								<select name="quyen" id="tenloaich" class="form-control nhaploai">
 							
