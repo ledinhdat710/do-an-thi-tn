@@ -343,7 +343,7 @@ Mirrored from demo.interface.club/londinium/index.html by HTTrack Website Copier
 						</li>
 						
 						<li>
-							<a href="{{url('admin/hócinh/dshocsinh')}}"><span>Danh sách học sinh</span> <i class="fas fa-user-graduate"></i></a>
+							<a href="{{url('admin/hocsinh/dshocsinh')}}"><span>Danh sách học sinh</span> <i class="fas fa-user-graduate"></i></a>
 							<!--<ul>
 									<li>
 										<a href="{{url('admin/hocsinh/dshocsinh')}}"><span style="padding-right: 80px">Danh sách học sinh</span>
