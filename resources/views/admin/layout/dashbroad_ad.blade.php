@@ -35,10 +35,10 @@
 				<a href="{{url('admin/hocsinh/dshocsinh')}}">
 					<li class="bg-success">
 						<div class="top-info">
-							<a href="{{url('admin/giaovien/dshocsinh')}}">Students</a>
+							<a href="{{url('admin/hocsinh/dshocsinh')}}">Students</a>
 							
 						</div>
-						<a href="{{url('admin/giaovien/dshocsinh')}}"><i class="fas fa-user-graduate"></i> </a>
+						<a href="{{url('admin/hocsinh/dshocsinh')}}"><i class="fas fa-user-graduate"></i> </a>
 						<span class="bottom-info bg-primary">{{count($hocsinh)}}</span>
 						
 					</li>
