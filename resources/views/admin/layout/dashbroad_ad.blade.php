@@ -43,13 +43,13 @@
 						
 					</li>
 				</a>
-				<a href="{{url('admin/monthi/dsmon')}}">
+				<a href="{{url('admin/monthi/dsmonthi')}}">
 					<li class="bg-info monhoc">
 						<div class="top-info">
-							<a href="{{url('admin/monthi/dsmon')}}">Subjects</a>
+							<a href="{{url('admin/monthi/dsmonthi')}}">Subjects</a>
 							
 						</div>
-						<a href="{{url('admin/monthi/dsmon')}}"><i class="fas fa-book"></i></a>
+						<a href="{{url('admin/monthi/dsmonthi')}}"><i class="fas fa-book"></i></a>
 						<span class="bottom-info bg-primary">{{count($monthi)}}</span>
 						
 					</li>

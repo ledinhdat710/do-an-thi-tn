@@ -368,7 +368,7 @@ Mirrored from demo.interface.club/londinium/index.html by HTTrack Website Copier
 						</li>
 
 						<li>
-							<a href="{{url('admin/monthi/dsmon')}}"><span>Quản lý môn thi</span> 
+							<a href="{{url('admin/monthi/dsmonthi')}}"><span>Quản lý môn thi</span> 
 								<i class="fas fa-book"></i></a>
 							<!--<ul>
 								<li>

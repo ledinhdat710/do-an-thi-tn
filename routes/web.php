@@ -153,6 +153,18 @@ Route::group(['prefix' => 'admin'], function () {
 		Route::get('xoahocsinh/{id}', 'HocSinhController@xoahocsinh');
 	});
 
+	Route::group(['prefix' => 'monthi'], function () {
+		Route::get('dsmonthi', 'MonThiController@getmt');
+
+		Route::get('themmonthi', 'MonThiController@getthemmt');
+		Route::post('themmonthi', 'MonThiController@postthemmt');
+		Route::get('suamonthi/{id}', 'MonThiController@getsuamt');
+		Route::post('suamonthi/{id}', 'MonThiController@postsuamt');
+		Route::get('importmonthi', 'MonThiController@importmt');
+		Route::post('importmonthi', 'MonThiController@import');
+		Route::get('xoamonthi/{id}', 'MonThiController@xoamon');
+	});
+
 
 	Route::group(['prefix' => 'user'], function () {
 		Route::get('dsuser', 'UserController@getuser');
