@@ -44,6 +44,8 @@ Route::post('/sendmail_ketqua','SendMailController@send');
 Route::get('dangnhap','TrangchuController@getdangnhap');
 
 Route::post('dangnhap','TrangchuController@postdangnhap');
+Route::get('dangky','TrangchuController@getdangky'); //Them dang ky ở đây
+Route::post('dangky','TrangchuController@postdangky');
 Route::get('dangxuat','TrangchuController@postdangxuat');
 Route::get('gvdangxuat','TrangchuController@gvdangxuat');
 

@@ -17,6 +17,7 @@
 <link rel="stylesheet" type = "text/css" href="../../../public/css/OwlCarousel/dist/assets/owl.carousel.min.css">
 <link rel="stylesheet" type = "text/css" href="../../../public/css/OwlCarousel/dist/assets/owl.theme.default.min.css">
 
+
  
 <script>
 (function(s, u, b, i, z){
@@ -41,11 +42,15 @@ subiz('setAccount', 'acqdqbopxrdhtmizzgjf');
 				<div class="col-md-1"></div>
 				<div class="col-md-1 doc">
 					<p class="add"><i class="fas fa-map"></i> ADDRESS</p>
+<<<<<<< HEAD:resources/views/trangchu/trangchu.blade.php
 					<p class="diachi">Hưng Yên 1</p>
+=======
+					<p class="diachi">Hà Nội</p>
+>>>>>>> bb3e903dae33b4e244c9b502861a0cd4bb28f8d7:resources/views/trangchu/trangchu.html
 				</div>
 				<div class="col-md-1 doc" >
 					<p class="add"><i class="fas fa-envelope-open"></i> EMAIL</p>
-					<p class="diachi a"  >thao@gmail.com </p>
+					<p class="diachi a"  >phamquyen@gmail.com </p>
 				</div>
 				<div class="col-md-1 doc">
 					<p class="add"><i class="fas fa-phone"></i> CONTACT</p>

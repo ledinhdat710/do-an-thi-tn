@@ -34,12 +34,12 @@
 				
 				<div class="col-md-12 footer_lienhe">
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="{{url('trangchu')}}"><p><img src="{{ asset('imgs/logo-light.png') }}" alt="" ></p></a>
+					<a href="{{url('trangchu')}}"><p><img src="{{ asset('imgs/eduquizz1.png') }}" style="width:200px;" alt="" ></p></a>
 					<!-- <h2 class="lgo"><i class="fas fa-graduation-cap mucunhan"></i> <span>EXAMIN</span></h2> -->
-					<p><span class="glyphicon glyphicon-map-marker"></span >	&nbsp;Địa chỉ: Mỹ Hào, Hưng Yên</p>
+					<p><span class="glyphicon glyphicon-map-marker"></span >	&nbsp;Địa chỉ: Hai Bà Trưng, Hà Nội</p>
 		  			<p><span class="glyphicon glyphicon-earphone"></span>&nbsp;	Điện thoại: 0969 79 8583</p>
 					<p><span class="glyphicon glyphicon-phone-alt"></span> &nbsp;Hotline: (+84) 1648 46 6660</p>
-					<p class="guimail"><span class="glyphicon glyphicon-envelope"></span> &nbsp;	Email: ngocthao@gmail.com</p>
+					<p class="guimail"><span class="glyphicon glyphicon-envelope"></span> &nbsp;	Email: Eduquizz@gmail.com</p>
 
 					<p >
 						<div class="email-box">
@@ -55,11 +55,11 @@
 			<div class="col-md-3 thongtin">
 				<h4><b>VỀ CHÚNG TÔI</b></h4>
 					<p><i class="fas fa-th-large"></i>  &nbsp;<a href="{{url('trangchu')}}"><span>Trang chủ</span></a></p>
-					<p><i class="fas fa-th-large"></i> &nbsp; <a href="{{url('gioithieu')}}"><span>Kỳ thi</span></a></p>
-					<p><i class="fas fa-th-large"></i> &nbsp; <a href="{{url('gioithieu')}}"><span>Giới thiệu</span></a></p>
-					<p><i class="fas fa-th-large"></i>&nbsp; <a href="{{url('lienhe')}}" ><span>Liên hệ</span></a></p>
+					<p><i class="fas fa-th-large"></i> &nbsp; <a href="{{url('gioithieu')}}"><span>Đề thi</span></a></p>
+					<!--<p><i class="fas fa-th-large"></i>&nbsp; <a href="{{url('lienhe')}}" ><span>Liên hệ</span></a></p>-->
 					<p> <i class="fas fa-th-large"></i>&nbsp; <a href="{{url('tintuc')}}" ><span>Tin tức</span></a></p>
 					<p><i class="fas fa-th-large"></i> &nbsp; <a href="{{url('tailieu')}}"><span>Tài liệu</span></a></p>
+					<p><i class="fas fa-th-large"></i> &nbsp; <a href="{{url('gioithieu')}}"><span>Giới thiệu</span></a></p>
 			</div>
 
 			<div class="col-md-3">
@@ -77,12 +77,13 @@
 			<div class="col-md-3 bando">
 				<h4><b>BẢN ĐỒ</b></h4>
 					<div>
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14904.84356149955!2d106.06072414028512!3d20.944044437157935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135a38164635b73%3A0xe8e22caf90128a76!2zTmjDom4gSMOyYSwgTeG7uSBIw6BvLCBIxrBuZyBZw6puLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1524675797573" width="300" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+						<!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14904.84356149955!2d106.06072414028512!3d20.944044437157935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135a38164635b73%3A0xe8e22caf90128a76!2zTmjDom4gSMOyYSwgTeG7uSBIw6BvLCBIxrBuZyBZw6puLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1524675797573" width="300" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>-->
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.812381651824!2d105.83974820981504!3d21.000156580561338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac70a2f48a15%3A0xfc5dfbb8602d0eef!2zMjA3IEdp4bqjaSBQaMOzbmcsIMSQ4buTbmcgVMOibSwgSGFpIELDoCBUcsawbmcsIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1700023125185!5m2!1svi!2s" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 					</div>
 			</div>
 		</div>
 		<div class="thelast">	
-			<p class="cop"><i class="far fa-copyright"></i> Copyright 2019 Develop by Ngoc Thao  
+			<p class="cop"><i class="far fa-copyright"></i> Copyright 2023
 				<span>
 					<i class="fas fa-envelope "></i>
 					<i class="fab fa-youtube-square"></i>

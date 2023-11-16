@@ -5,14 +5,14 @@
 			<div class="row anhbanner" style="width: 1550px">
 				
 				<div class="col-md-12 banner">
-					<h3 class="dream">FOLLOW YOUR DREAM</h3>
+					<h3 class="dream">EDUQUIZZ</h3>
 					<div class="up">
 						<h2 class="online">Learn From Best Online</h2>
 					<h2 class="training">Training Exam</h2>
 					</div>
 					<p class="canbtn">
-						<a href="trangchu"><span class="view">VIEW MORE</span></a>
-						<a href="trangchu"><span class="thamgia">JOIN EXAMIN</span></a>
+						<a href="dangnhap"><span class="view">ĐĂNG NHẬP</span></a>
+						<a href="dangky"><span class="thamgia">ĐĂNG KÝ</span></a>
 					</p>
 				</div>
 			</div>

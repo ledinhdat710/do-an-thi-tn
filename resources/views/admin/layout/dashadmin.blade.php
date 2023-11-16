@@ -104,8 +104,8 @@
 	<!-- Navbar -->
 	<div class="navbar navbar-inverse" role="navigation" style="background-color: #213351;margin-top: -20px">
 		<div class="navbar-header">
-            <a class="navbar-brand" href="dashbroad_ad" style="font-size: 18px"><img src="imgs/quochuy.gif" alt="" width="50" height="50" style="margin-top: -10px;margin-right:8px;display: inline;">
-               Hệ thống thi trắc nghiệm trường THPT Nam Khoái Châu</a>
+            <a class="navbar-brand" href="dashbroad_ad" style="font-size: 18px"><img src="imgs/eduwhite1.png" alt="" width="120" style="margin-top: -4px;margin-right:8px;display: inline;">
+               Hệ thống quản lý thi trắc nghiệm</a>
 			
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-icons">
 				<span class="sr-only">Toggle navbar</span>
@@ -366,7 +366,7 @@
 							</ul>
 						</li>
 
-						<li>
+						<!--<li>
 							<a href="{{url('admin/monthi/dsmon')}}"><span>Quản lý môn thi</span> 
 								<i class="fas fa-book"></i></a>
 							<ul>
@@ -376,7 +376,7 @@
 								<li><a href="{{url('admin/monthi/themmon')}}"><span style="padding-right: 50px">Thêm môn thi</span> <i class="fas fa-plus"></i> </a></li>
 								
 							</ul>
-						</li>
+						</li>-->
 						
 						<li>
 							<a href="{{url('admin/khoi/dskhoi')}}"><span>Quản lý khối</span>
@@ -403,7 +403,7 @@
 							</ul>
 						</li>
 
-						<li>
+						<!--<li>
 							<a href="{{url('admin/ketqua/dsketqua')}}"><span>Quản lý kết quả</span> <i class="fas fa-file-invoice"></i></a>
 							
 						</li>
@@ -412,7 +412,7 @@
 						<li>
 							<a href="#"><span>Cài đặt</span> <i class="fas fa-cog"></i></a>
 						
-						</li>
+						</li>-->
 						
 						
 					
@@ -509,15 +509,6 @@
 				</ul>
 			</div>
 			<!-- /breadcrumbs line -->
-
-
-			
-
-
-            
-					
-    
-
 						<!-- default datatable inside panel -->
 						 
 

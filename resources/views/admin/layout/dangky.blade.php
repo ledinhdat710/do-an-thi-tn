@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Đăng nhập</title>
+	<title>Đăng ký</title>
 	<link rel="stylesheet" href="{{ url('css/trangdangnhap.css')}}">
 </head>
 <body>
@@ -10,13 +10,13 @@
 		@if(Session::has('flag'))
 			<div class="alert alert-{{Session::get('flag')}}">{{Session::get('message')}} </div>
 		@endif</div>
-	<form action="dangnhap" method="post">
+	<form action="dangky" method="post">
 		<input type="hidden" name="_token" value="{{ csrf_token()}}">
 		<div class="form-area">
 		<div class="img-area">
 			<img src="imgs/login-icon.png" alt="">
 		</div>
-		<h2>Đăng Nhập</h2>
+		<h2>Đăng Ký</h2>
 		<p>Email: </p>
 		<input type="email" name="email" required="">
 		<p>Mật khẩu: </p>
