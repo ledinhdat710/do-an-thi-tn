@@ -27,7 +27,8 @@
 								
 							</div>
 						</div>
-						<div class="col-md-2" style="float:right;">
+						<div class="btn" style="float:right;">
+						<div class="col-md-2" >
 							@if(Auth::check() && Auth::user()->quyen==0)
 								<a href="{{url('dangxuat')}}"><div class="login"style="width: 120px;"><i class="fas fa-sign-out-alt"></i> Đăng xuất</div></a>
 							@else
@@ -42,6 +43,7 @@
 						
 								<a href="{{url('dangky')}}"><div class="login "style="width: 120px;"><i class="fas fa-user"></i> Đăng ký</div></a>
 							@endif
+						</div>
 						</div>
 					</div>
 		</div>
