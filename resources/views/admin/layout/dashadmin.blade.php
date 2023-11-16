@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from demo.interface.club/londinium/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Oct 2017 04:29:02 GMT -->
+<!-- Chỉnh sửa admin 
+Mirrored from demo.interface.club/londinium/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Oct 2017 04:29:02 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="utf-8">
@@ -329,8 +330,8 @@
 						<li class="active"><a href="dashbroad_ad"><span>Dashboard</span> <i class="icon-screen2"></i></a></li>
 						
 						<li>
-							<a href=""><span>Quản lý giáo viên</span> <i class="fas fa-chalkboard-teacher"></i></a>
-							<ul>
+							<a href="{{url('admin/giaovien/dsgiaovien')}}"><span>Danh sách giáo viên</span> <i class="fas fa-chalkboard-teacher"></i></a>
+							<!--<ul>
 									<li>
 										<a href="{{url('admin/giaovien/dsgiaovien')}}"><span style="padding-right: 80px">Danh sách giáo viên</span> <i class="fas fa-chalkboard-teacher"></i> </a>
 									</li>
@@ -338,12 +339,12 @@
 										<a href="{{url('admin/giaovien/themgiaovien')}}"><span style="padding-right: 120px">Thêm</span><i class="fas fa-plus"></i> </a>
 									</li>
 									
-							</ul>
+							</ul>-->
 						</li>
 						
 						<li>
-							<a href=""><span>Quản lý học sinh</span> <i class="fas fa-user-graduate"></i></a>
-							<ul>
+							<a href="{{url('admin/hócinh/dshocsinh')}}"><span>Danh sách học sinh</span> <i class="fas fa-user-graduate"></i></a>
+							<!--<ul>
 									<li>
 										<a href="{{url('admin/hocsinh/dshocsinh')}}"><span style="padding-right: 80px">Danh sách học sinh</span>
 										 <i class="fas fa-user-graduate"></i> </a>
@@ -352,24 +353,24 @@
 										<a href="{{url('admin/hocsinh/themhocsinh')}}"><span style="padding-right: 120px">Thêm học sinh</span><i class="fas fa-plus"></i> </a>
 									</li>
 									
-							</ul>
+							</ul>-->
 						</li>
 
 						<li>
 							<a href="{{url('admin/kythi/dskythi')}}"><span>Quản lý kỳ thi</span> <i class="fab fa-buromobelexperte"></i></a>
-							<ul>
+							<!--<ul>
 								<li>
 									<a href="{{url('admin/kythi/dskythi')}}"><span style="padding-right: 80px">Danh sách kỳ thi</span> <i class="fas fa-list"></i> </a>
 								</li>
 								<li><a href="{{url('admin/kythi/themkythi')}}"><span style="padding-right: 50px">Thêm kỳ thi</span> <i class="fas fa-plus"></i> </a></li>
 								
-							</ul>
+							</ul>-->
 						</li>
 
-						<!--<li>
+						<li>
 							<a href="{{url('admin/monthi/dsmon')}}"><span>Quản lý môn thi</span> 
 								<i class="fas fa-book"></i></a>
-							<ul>
+							<!--<ul>
 								<li>
 									<a href="{{url('admin/monthi/dsmon')}}"><span style="padding-right: 80px">Danh sách môn thi</span> <i class="fas fa-book"></i> </a>
 								</li>
@@ -382,25 +383,25 @@
 							<a href="{{url('admin/khoi/dskhoi')}}"><span>Quản lý khối</span>
 								<i class="fas fa-file-invoice"></i>
 							</a>
-							<ul>
+							<!--<ul>
 								<li>
 									<a href="{{url('admin/khoi/dskhoi')}}"><span style="padding-right: 80px">Danh sách khối</span> <i class="fas fa-file-invoice"></i>
 									</a>
 								</li>
 								<li><a href="{{url('admin/khoi/themkhoi')}}"><span style="padding-right: 50px">Thêm khối</span> <i class="fas fa-plus"></i> </a></li>
 								
-							</ul>
+							</ul>-->
 						</li>
 
 						<li>
 							<a href="{{url('admin/user/dsuser')}}"><span>Quản lý users</span> <i class="fas fa-users"></i></a>
-							<ul>
+							<!--<ul>
 								<li>
 									<a href="{{url('admin/user/dsuser')}}"><span style="padding-right: 80px">Danh sách users</span> <i class="fas fa-users"></i> </a>
 								</li>
 								<li><a href="{{url('admin/user/themuser')}}"><span style="padding-right: 50px">Thêm user</span> <i class="fas fa-user-edit"></i> </a></li>
 								
-							</ul>
+							</ul>-->
 						</li>
 
 						<!--<li>
