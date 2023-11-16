@@ -32,12 +32,6 @@
 					<table class="table">
 						
 						<tr class="tbl">
-							<td class="style_row"><i class="fa fa-edit"></i> &nbsp; &nbsp;Tên Giáo Viên</td>
-							<td><input type="text" class="from-control nhaploai" placeholder="  Nhập tên giáo viên" name="tenloai" />
-							
-							</td>
-						</tr>
-						<tr class="tbl">
 							<td class="style_row"><i class="fa fa-edit"></i> &nbsp; &nbsp;Hình ảnh</td>
 							<td><input type="file" class="from-control "  name="hinhanh" />
 							
