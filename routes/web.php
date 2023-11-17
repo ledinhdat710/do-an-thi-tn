@@ -56,6 +56,7 @@ Route::get('trangchu', 'TrangchuController@getDeThi');
 Route::get('gioithieu', function () {
 	return view('admin.layout.gioithieu');
 });
+Route::get('ketquathi', 'KetQuaController@ketquathihs');
 Route::get('lienhe', function () {
 	return view('admin.layout.lienhe');
 });
