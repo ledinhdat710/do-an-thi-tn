@@ -3,6 +3,10 @@ login*{
 	padding: 0;
 	font-family: Tahoma;
 }
+regis*{
+	margin:0;
+	padding:0;
+}
 
 .menu-top{
 	background: linear-gradient(90deg,#203A65,#1A3B6E);
@@ -52,10 +56,22 @@ login*{
 	border-radius: 5px;
 	margin-top: 20px;
 }
-.login i{
+/*.login i{
 	margin-left: 3px;
 
+}*/
+.regis{
+	color: #000;
+	background-color: #ffb606;
+	width: 100px;
+	padding-left: 20px;
+	padding-top: 10px;
+	height: 40px;
+	font-weight: bold;
+	border-radius: 5px;
+	
 }
+
 
 .menu-ngang{
 	height: 80px;
