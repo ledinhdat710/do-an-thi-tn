@@ -8,14 +8,14 @@ body{
 }
 
 .form-area{
-    /*width: 600px;
-    height: 850px;*/
+    width: 600px;
+    height: 850px;
     margin: 60px auto 0;
     position: relative;
     /*background: rgba(0,0,0,0.4);*/
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-top: 25px;
+    margin-bottom: 20px;
     padding: 25px;
     border: 3px solid rgba(0,0,0,0.4);
     border-radius: 10px;
@@ -62,6 +62,7 @@ input{
 
 
 }
+
 .btnlogin{
     display: inline-block;
     height: 40px;

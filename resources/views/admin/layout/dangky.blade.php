@@ -114,12 +114,13 @@
 			
 		</a>
 
-		<a href="" class="for-pass">Quên mật khẩu? </a>
-	</div>-->
+		<a href="" class="for-pass">Quên mật khẩu? </a>-->
+	
     <p></p>
     <button type="submit" class="btnlogin">
 					 <span class="btn-text"> Đăng ký</span> 
 			</button> 
+			</div>
 	</form>
 </body>
 @stop
