@@ -34,6 +34,10 @@
 		float: left;
 		margin-left: 15px;
 	}
+	/* .regis{
+		float: right;
+		margin-left: 20px;
+	} */
 	
 </style>
  

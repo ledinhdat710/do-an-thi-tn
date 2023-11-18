@@ -24,11 +24,13 @@
 
 			</div>
 		</div>
-		<div class="col-md-2" style="float:right;">
+
+		<div class="col-md-2" >
 			@if(Auth::check() && Auth::user()->quyen==0)
 			<a href="{{url('dangxuat')}}">
 				<div class="login" style="width: 120px;"><i class="fas fa-sign-out-alt"></i> Đăng xuất</div>
 			</a>
+			
 			@else
 
 			<a href="{{url('dangnhap')}}">
@@ -36,18 +38,19 @@
 			</a>
 			@endif
 		</div>
-		<div class="col-md-2">
+		<div class="btnregis" >
 			@if(Auth::check() && Auth::user()->quyen==0)
-			<a href="{{url('dangky')}}">
-				<div class="login" style="width: 120px;"><i class="fas fa-sign-out-alt"></i> Đăng ký</div>
-			</a>
+			<!-- <a href="{{url('dangky')}}">
+				<div class="login" style="width: 120px;"><i class="fas fa-sign-out-alt"></i> Đăng xuất</div>
+			</a> -->
 			@else
 
 			<a href="{{url('dangky')}}">
-				<div class="login " style="width: 120px;"><i class="fas fa-user"></i> Đăng ký</div>
+				<div class="regis " style="width: 120px;"><i class="fas fa-sign-in-alt"></i> Đăng ký</div>
 			</a>
 			@endif
 		</div>
+		
 	</div>
 </div>
 <div class="menu-ngang">
@@ -87,6 +90,10 @@
 					</div>
 				</li>
 
+				@if(Auth::check() && Auth::user()->quyen==0)
+				<li><a href="{{url('ketquathi')}}">KẾT QUẢ THI</a></li>
+				@endif
+
 				<li>
 					<div class="dropdown">
 
@@ -121,12 +128,11 @@
 				</li>
 
 
-				<li><a href="{{url('tintuc')}}">TIN TỨC </a></li>
+				<!-- <li><a href="{{url('tintuc')}}">TIN TỨC </a></li> -->
 				<!--<li><a href="{{url('lienhe')}}">LIÊN HỆ </a></li>-->
+				
+
 				<li><a href="{{url('gioithieu')}}">GIỚI THIỆU </a></li>
-				@if(Auth::check() && Auth::user()->quyen==0)
-				<li><a href="{{url('ketquathi')}}">KẾT QUẢ THI</a></li>
-				@endif
 				<!-- <li><input type="text" class="timkiem" placeholder="  Tìm kiếm"> <i class="fas fa-search"></i></li> -->
 				<li style="float:right;">
 					<form method="get" id="searchform" action="search">
