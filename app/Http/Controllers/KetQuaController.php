@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade as PDF;
-use PdfMerger;
 use App\KetQua;
 use App\KyThi;
 use App\MonThi;
 use DB;
+use Auth;
 
 class KetQuaController extends Controller
 {
@@ -106,11 +105,13 @@ class KetQuaController extends Controller
 
 	public function ketquathihs()
 	{
+		$id = Auth::id();
+		echo ($id);
 		$ketqua = DB::table('ketqua')
 			->join('hocsinh', 'hocsinh.id_hs', 'ketqua.id_hs', 'hocsinh.id')
 			->join('dethi', 'dethi.id_de', 'ketqua.id_de')
 			->join('monthi', 'monthi.id_mh', 'dethi.id_mh')
-			->join('kythi', 'kythi.id_ky', 'dethi.id_ky')->get()->toArray();
+			->join('kythi', 'kythi.id_ky', 'dethi.id_ky')->where('ketqua.id_hs', '=', $id)->get()->toArray();
 		$diem = DB::table('ketqua')->pluck('diem');
 		$xeploai = '';
 		if ($diem[0] < 5) {
