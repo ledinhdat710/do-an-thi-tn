@@ -14,7 +14,7 @@
                 <thead>
                     <tr>
                         <th>STT</th>
-                        <th>Mã SV</th>
+                        <th>Mã HS</th>
                         <th>Họ và tên</th>
                         <th>Giới tính</th>
                         <th>Ngày sinh</th>
