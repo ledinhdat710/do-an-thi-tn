@@ -35,7 +35,7 @@
 			<thead>
 				<tr>
 					<th>STT</th>
-
+					<th>Tên đề thi</th>
 					<th>Tên kỳ thi</th>
 					<th>Thời gian thi</th>
 					<th>Ngày thi</th>
@@ -56,7 +56,7 @@
 				foreach ($dethi as $dt) : $stt ?>
 					<tr>
 						<td>{{ $stt++ }}</td>
-
+						<td>{{$dt->tendethi}}</td>
 						<td>{{$dt->tenky}}</td>
 						<td>{{$dt->thoigianthi}} phút</td>
 						<td>{{date('d/m/Y', strtotime($dt->ngaythi))}}</td>
