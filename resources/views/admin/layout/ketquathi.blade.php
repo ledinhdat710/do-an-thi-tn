@@ -14,17 +14,9 @@
                 <thead>
                     <tr>
                         <th>STT</th>
-<<<<<<< HEAD
-                        <th>Mã HS</th>
-                        <th>Họ và tên</th>
-                        <th>Giới tính</th>
-                        <th>Ngày sinh</th>
-                        <th>Địa chỉ</th>
-=======
                         <th>Ngày thi</th>
                         <th>Tên đề thi</th>
                         <th>Thời gian thi</th>
->>>>>>> 4678bb4e6fd4ebb12bb204216db3df290f73b9d9
                         <th>Điểm</th>
                         <th>Xếp loại</th>
 
