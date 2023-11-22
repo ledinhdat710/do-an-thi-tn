@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,32 +13,36 @@
 
 	  <style>
 	 	body{
-	 		font-family: 'Roboto Slab', serif;
-	 		background-color: #6cf;
+	 		font-family: 'Roboto',Helvetica Neue,Helvetica,Arial,sans-serif;
+	 		/* background-color: #000; */
 	 	}
 	 	.giaodienthi{
-	 		height: 460px;
-	 		width: 1000px;
+	 		height: 600px;
+	 		width: 800px;
 	 		position: absolute;
 	 		top: 380px;
 	 		left: 50%;
 	 		transform: translateX(-50%) translateY(-50%);
 	 		background: rgba(255,255,255,0.5);
 	 		padding: 20px;
-	 		border: 1px solid #08038C;
+	 		/* border: 1px solid #08038C; */
 	 		box-shadow: 0 0 8px 3px #fff;
+			/* margin-top:260px; */
+			border: 2px solid rgba(0,0,0,0.4);
+			border-radius: 10px;
 	 	}
 	 	.title{
 	 		padding-top: 20px;
 	 		text-align: center;
-	 		font-size: 29px;
+	 		font-size: 40px;
 	 		text-transform: uppercase;
-	 		color: #08038C;
+	 		color: #313030;
+			font-weight: bold;
 	 	}
 	 	#question{
 	 		padding: 20px;
 	 		font-size: 22px;
-	 		background-color: #08038C;
+	 		background-color: #1C3A6A;
 	 		border-radius: 20px;
 	 		margin: 10px 0 10px 0;
 	 		color: #f6f6f6;
@@ -48,15 +54,15 @@
 	 		vertical-align: middle;
 	 		background: rgba(255,255,255,0.5);
 	 		margin: 10px 0px 10px 10px;
-	 		color: #000000;
+	 		color: #313030;
 	 		border-radius: 20px;
 	 	}
 	 	.option:hover{
-	 		background: #08038C;
+	 		background: #6F7E97;
 	 		color: #f6f6f6;
 	 	}
 	 	.next-btn{
-	 		border:none;
+	 		/* border:none;
 	 		outline: none;
 	 		background: rgba(255,25,255,0.5);
 	 		width: 100px;
@@ -66,7 +72,23 @@
 	 		float: right;
 	 		margin-right: -160px;
 	 		margin-top: 0px;
-	 		color: #000;
+	 		color: #000; */
+			 display: inline-block;
+			height: 40px;
+			width: 150px;
+			line-height: 40px;
+			overflow: hidden;
+			/* position: relative; */
+			text-align: center;
+			border: none;
+			background:#ffb606;
+			border-radius: 25px;
+			color: #313030;
+			text-transform: uppercase;
+			/* margin-top: 20px; */
+			cursor: pointer;
+			font-weight: bold;
+			text-decoration: none;
 	 	}
 	 	.phantrang{
 	 		text-align: right;
@@ -159,10 +181,10 @@
 	<form action="../../ketqua" method="post"  enctype="multipart/form-data">
 		<input type="hidden" name="_token()" value="{{csrf_token()}}">
 		<div id="quizContainer" class="container giaodienthi">
-		<div class="title">KỲ THI {{$dethi->kythi->tenky}}</div>
+		<div class="title" style="font-size:30px;">ĐỀ THI {{$dethi->kythi->tenky}}</div>
 		<div class="information"><b>Đề: {{$dethi->trangthai}} | <b>Môn: {{$dethi->monthi->tenmh}}</b> | <b>Số câu: {{$dethi->socau}} câu</b> | <b>Thời gian thi: {{$dethi->thoigianthi}} phút</b></b></div>
 		<div class="counttime">
-			<img src="../../imgs/khung.png"  class="khung_hoa" width="145" height="100" height="" alt="" >
+			<!-- <img src="../../imgs/khung.png"  class="khung_hoa" width="145" height="100" height="" alt="" > -->
 				<p class="gio"><span id="m"  ></span> :
 					<span id="s">00</span></p>
 		</div>
@@ -187,8 +209,8 @@
 				<input type="hidden" value="{{$ct->id_de}}" name="id_dethi">
 				<input type="hidden" value="{{$ct->id_loaich}}" name="id_loai">
 				
-				{{-- <input type="hidden" value="{{$user}}" name="id_user"> --}}
-			{{$stt}} . {!!$ct->noidung!!}
+				{{-- <input type="hidden" value="{{$user}}" name="id_user"> --}}Câu
+			{{$stt}} : {!!$ct->noidung!!}
 			<div class="img_anhcauhoi"><img src="../../upload/cauhoi/{{$ct->hinhanh}}"  alt="" width="90" height="70"></div>
 		</div>
 
@@ -216,7 +238,7 @@
 			@endfor
 		@endforeach --}}
 			{{-- <p class="phantrang">{!!$ctdethi->links()!!}</p> --}}
-		<a href="../../tructuyen/{{$dethi->id_de}}"><button  class="next-btn"  type="button">SUBMIT</button></a>
+		<a href="../../tructuyen/{{$dethi->id_de}}"><button  class="next-btn"  type="button">NỘP BÀI</button></a>
 			@endforeach
 	</form>
 	
@@ -275,6 +297,8 @@
 	</script>	
 		
 </div>
+
+
 <script type="text/javascript">
 	$(document).on('click', '.nutso', function(e){
 			e.preventDefault();
@@ -354,4 +378,5 @@
 				
 	</script>
 </body>
+
 </html>

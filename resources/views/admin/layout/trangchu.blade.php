@@ -10,10 +10,21 @@
 						<h2 class="online">Learn From Best Online</h2>
 					<h2 class="training">Training Exam</h2>
 					</div>
-					<p class="canbtn">
+					@if(Auth::check() && Auth::user()->quyen==0)
+			<!-- <a href="{{url('dangky')}}">
+				<div class="login" style="width: 120px;"><i class="fas fa-sign-out-alt"></i> Đăng xuất</div>
+			</a> -->
+			@else
+			<p class="canbtn">
 						<a href="dangnhap"><span class="view">ĐĂNG NHẬP</span></a>
 						<a href="dangky"><span class="thamgia">ĐĂNG KÝ</span></a>
 					</p>
+			
+			@endif
+					<!-- <p class="canbtn">
+						<a href="dangnhap"><span class="view">ĐĂNG NHẬP</span></a>
+						<a href="dangky"><span class="thamgia">ĐĂNG KÝ</span></a>
+					</p> -->
 				</div>
 			</div>
 			
