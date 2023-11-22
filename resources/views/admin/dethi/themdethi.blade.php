@@ -33,6 +33,12 @@
 		<input type="hidden" name="_token" value="{{csrf_token()}}">
 		<input type="hidden" name="email" value="ngocthaohehe@gmail.com">
 		<table class="table">
+			<tr class="tbl">
+				<td class="style_row"><i class="fa fa-edit"></i> &nbsp; &nbsp;Tên đề thi</td>
+				<td>
+					<input type="text" class="from-control nhaploai" placeholder="  Nhập tên đề thi" name="tendethi" id="txtTen" />
+				</td>
+			</tr>
 
 			<tr class="tbl">
 				<td class="style_row"><i class="fa fa-edit"></i> &nbsp; &nbsp;Tên Kỳ Thi</td>
