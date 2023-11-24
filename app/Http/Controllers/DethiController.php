@@ -233,7 +233,8 @@ class DethiController extends Controller
         $de->id_khoi = $request->namekhoi;
         $de->id_mh = $request->namemonthi;
         $de->id_gv = $request->namegv;
-        $de->ngaythi = date('d/m/Y', strtotime($request->ngaythi));
+        // $de->ngaythi = date('d/m/Y', strtotime($request->ngaythi));
+        $de->ngaythi = $request->ngaythi;
         $de->thoigianthi = $request->thoigianthi;
         $de->socau = $request->socau;
         $de->trangthai = $request->trangthai;

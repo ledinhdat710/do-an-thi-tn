@@ -13,7 +13,12 @@
 			<p class="add"><i class="fas fa-phone"></i> CONTACT</p>
 			<p class="diachi">0967978353</p>
 		</div>
+		@if(Auth::check() && Auth::user()->quyen==0)
 		<div class="col-md-4"></div>
+		@else
+
+		<div class="col-md-2"></div>
+		@endif
 		<div class="col-md-2 infor_user">
 			@if(Auth::check() && Auth::user()->quyen==0)
 			<img src="{{asset('imgs/demo/users/may-man.jpg') }}" alt="" width="35" height="35">
@@ -24,13 +29,13 @@
 
 			</div>
 		</div>
-
-		<div class="col-md-2" >
+		@if(Auth::check() && Auth::user()->quyen==0)
+		<div class="col-md-2">
 			@if(Auth::check() && Auth::user()->quyen==0)
 			<a href="{{url('dangxuat')}}">
 				<div class="login" style="width: 120px;"><i class="fas fa-sign-out-alt"></i> Đăng xuất</div>
 			</a>
-			
+
 			@else
 
 			<a href="{{url('dangnhap')}}">
@@ -38,19 +43,36 @@
 			</a>
 			@endif
 		</div>
-		<div class="btnregis" >
-			@if(Auth::check() && Auth::user()->quyen==0)
-			<!-- <a href="{{url('dangky')}}">
+		@else
+		<div class="col-md-4" style="display:flex; justify-content: center">
+			<div style="margin-right:20px">
+				@if(Auth::check() && Auth::user()->quyen==0)
+				<a href="{{url('dangxuat')}}">
+					<div class="login" style="width: 120px;"><i class="fas fa-sign-out-alt"></i> Đăng xuất</div>
+				</a>
+
+				@else
+
+				<a href="{{url('dangnhap')}}">
+					<div class="login " style="width: 120px;"><i class="fas fa-user"></i> Đăng nhập</div>
+				</a>
+				@endif
+			</div>
+			<div>
+				@if(Auth::check() && Auth::user()->quyen==0)
+				<!-- <a href="{{url('dangky')}}">
 				<div class="login" style="width: 120px;"><i class="fas fa-sign-out-alt"></i> Đăng xuất</div>
 			</a> -->
-			@else
+				@else
 
-			<a href="{{url('dangky')}}">
-				<div class="regis " style="width: 120px;"><i class="fas fa-sign-in-alt"></i> Đăng ký</div>
-			</a>
-			@endif
+				<a href="{{url('dangky')}}">
+					<div class="regis " style="width: 120px;"><i class="fas fa-sign-in-alt"></i> Đăng ký</div>
+				</a>
+				@endif
+			</div>
 		</div>
-		
+		@endif
+
 	</div>
 </div>
 <div class="menu-ngang">
@@ -130,7 +152,7 @@
 
 				<!-- <li><a href="{{url('tintuc')}}">TIN TỨC </a></li> -->
 				<!--<li><a href="{{url('lienhe')}}">LIÊN HỆ </a></li>-->
-				
+
 
 				<li><a href="{{url('gioithieu')}}">GIỚI THIỆU </a></li>
 				<!-- <li><input type="text" class="timkiem" placeholder="  Tìm kiếm"> <i class="fas fa-search"></i></li> -->
