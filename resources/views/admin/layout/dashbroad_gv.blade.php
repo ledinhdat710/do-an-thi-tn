@@ -1,5 +1,5 @@
 @extends('admin.layout.master');
-@section('title','Quản Lý Kỳ Thi');
+@section('title','Dashboard');
 @section('main')
 
 	<!-- Page header -->

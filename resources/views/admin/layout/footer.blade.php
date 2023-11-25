@@ -34,7 +34,7 @@
 				
 				<div class="col-md-12 footer_lienhe">
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="{{url('trangchu')}}"><p><img src="{{ asset('imgs/eduquizz1.png') }}" style="width:200px;" alt="" ></p></a>
+					<a href="{{url('trangchu')}}"><p><img src="{{ asset('imgs/eduwhite1.png') }}" style="width:200px;" alt="" ></p></a>
 					<!-- <h2 class="lgo"><i class="fas fa-graduation-cap mucunhan"></i> <span>EXAMIN</span></h2> -->
 					<p><span class="glyphicon glyphicon-map-marker"></span >	&nbsp;Địa chỉ: Hai Bà Trưng, Hà Nội</p>
 		  			<p><span class="glyphicon glyphicon-earphone"></span>&nbsp;	Điện thoại: 0969 79 8583</p>

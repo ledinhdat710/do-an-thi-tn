@@ -49,7 +49,7 @@
 				<div class="regis " style="width: 120px;"><i class="fas fa-sign-in-alt"></i> Đăng ký</div>
 			</a>
 			@endif
-		</div>
+		</div> 
 		
 	</div>
 </div>
@@ -58,7 +58,7 @@
 		<div class="col-md-1"></div>
 		<div class="col-md-2">
 			<a href="{{url('trangchu') }}">
-				<img src="{{asset('imgs/eduquizz1.png') }}" style="width:150px; margin-top: 10px;display: inline;" alt="">
+				<img src="{{asset('imgs/eduquizz2.png') }}" style="width:170px; margin-top: 10px;display: inline;" alt="">
 			</a>
 
 		</div>
