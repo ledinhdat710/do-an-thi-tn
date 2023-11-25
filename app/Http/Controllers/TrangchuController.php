@@ -15,9 +15,11 @@ use App\DapAnDung;
 use App\CtDeThi;
 use App\MucDo;
 use App\KetQua;
+use App\User;
 use DB;
 use Auth;
 use Hash;
+use Illuminate\Support\Facades\Log;
 
 class TrangchuController extends Controller
 {
@@ -75,11 +77,6 @@ class TrangchuController extends Controller
   {
     return view('admin.layout.dangnhap');
   }
-  public function getdangky(Request $req)
-  { //Thêm hàm get đăng ký
-    return view('admin.layout.dangky');
-  }
-
   public function postdangnhap(Request $req)
   {
     $this->validate(
@@ -110,33 +107,45 @@ class TrangchuController extends Controller
       return redirect()->back()->with(['flag' => 'danger', 'message', 'Đăng nhập không thành công']);
     }
   }
-  public function postdangky(Request $req)
+
+  public function getdangky(Request $req)
+  { //Thêm hàm get đăng ký
+    return view('admin.layout.dangky');
+  }
+  public function postdangky(Request $request)
   {
+    Log::info('mymessage'); 
     $this->validate(
-      $req,
+      $request,
       [
-        'email' => 'required|email', //require: k đc rỗng, email: định dạng email
-        'password' => 'required|min:6|max:20'
+        'tenuser' => 'required|min:3|alpha',
+        'email' => 'required|email|unique:users',
+        'password' => 'required|min:6|max:20',
+        'quyen' => 'required'
       ],
       [
+        'tenuser.required' => 'Bạn chưa nhập tên người dùng',
+        'tenuser.min' => 'Tên người dùng ít nhất 3 kí tự',
+        'tenuser.numeric' => 'Vui lòng nhập đúng ký tự chữ',
         'email.required' => 'Vui lòng nhập email',
-        'email.email' => 'Email không đúng định dạng',
-        'password.required' => 'Vui lòng nhập mật khẩu',
-        'password.min' => 'Mật khẩu ít nhất 6 ký tự',
-        'password.max' => 'Mật khẩu không quá 20 ký tự'
+        'email.email' => 'Vui lòng nhập đúng định dạng email',
+        'email.unique' => 'Email đã tồn tại vui lòng nhập email khác!',
+        'password.required' => 'Vui lòng nhập password',
+
+        'password.min' => 'Password ít nhất 6 ký tự',
+        'password.max' => 'Password không quá 20 ký tự',
+
       ]
     );
-    $chungthuc =  array('email' => $req->email, 'password' => $req->password);
-    if (Auth::attempt($chungthuc)) {
-      if (Auth::user()->quyen == '0')
-        return redirect('trangchu');
-      if (Auth::user()->quyen == '1')
-        return redirect('giaovien/dash/dashbroad_gv');
-      if (Auth::user()->quyen == '2')
-        return redirect('dashbroad_ad');
-    } else {
-      return redirect()->back()->with(['flag' => 'danger', 'message', 'Đăng nhập không thành công']);
-    }
+    //sau khi bắt lỗi xong, lấy dlieu lưu vào trong model
+    $user = new User;
+    $user->name = $request->tenuser;
+    $user->email = $request->email;
+    $user->password = Hash::make($request->password);
+    $user->quyen = $request->quyen;
+    $user->save();
+    //dẫn về trang 
+    return redirect('admin.layout.dangnhap')->with('thongbao', 'Thêm tài khoản thành công!');
   }
 
   public function postdangxuat()
