@@ -65,14 +65,6 @@
 			</a> -->
 				@else
 
-<<<<<<< HEAD
-			<a href="{{url('dangky')}}">
-				<div class="regis " style="width: 120px;"><i class="fas fa-sign-in-alt"></i> Đăng ký</div>
-			</a>
-			@endif
-		</div> 
-		
-=======
 				<a href="{{url('dangky')}}">
 					<div class="regis " style="width: 120px;"><i class="fas fa-sign-in-alt"></i> Đăng ký</div>
 				</a>
@@ -81,7 +73,6 @@
 		</div>
 		@endif
 
->>>>>>> 5d9bba5a64330b118b98b83df3e46363e09adcd3
 	</div>
 </div>
 <div class="menu-ngang">
