@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Barryvdh\DomPDF\Facade as PDF;
+use PDF;
 use App\KetQua;
 use App\KyThi;
 use App\MonThi;
