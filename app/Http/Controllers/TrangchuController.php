@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Barryvdh\DomPDF\Facade as PDF;
+use PDF;
 use PdfMerger;
 use App\MonThi;
 use App\Khoi;

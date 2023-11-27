@@ -10,7 +10,7 @@ use App\MucDo;
 use App\Khoi;
 use App\DapAnDung;
 use App\Imports\CauhoiImport;
-use Barryvdh\DomPDF\Facade as PDF;
+use PDF;
 use DB;
 use Excel;
 
