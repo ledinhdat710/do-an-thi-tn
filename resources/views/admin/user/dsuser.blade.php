@@ -5,8 +5,8 @@
                
                    <a href="admin/user/themuser"><button data-toggle="modal" data-target="#modal_form_horizontal2" class="btn btnthem" >Thêm
                    </button></a>
-                   <a href="import"> <button type="button" class="btn btnthem">Import</button></a>
-                   <a href="export"><button type="button" class="btn btnthem">Export</button></a>
+                   <!-- <a href="import"> <button type="button" class="btn btnthem">Import</button></a>
+                   <a href="export"><button type="button" class="btn btnthem">Export</button></a> -->
                   
 					
               
@@ -27,6 +27,7 @@
 											<th>STT</th>
 											<th>Tên người dùng</th>
 											<th>Email</th>
+											<th>Quyền</th>
 											<th>Sửa</th>
 				                            <th>Xóa</th>
 				                        </tr>
@@ -39,7 +40,15 @@
 											<td>{{ $stt++ }}</td>
 											<td id="name" name="name">{{$us->name}}</td>
 											<td id="name" name="email">{{$us->email}}</td>
-														
+											<td id="name" name="email">
+												@if($us->quyen == '0')
+												<p>Học sinh</p>
+												@elseif($us->quyen == '1')
+												<p>Giáo viên</p>
+												@elseif($us->quyen == '2')
+												<p>Admin</p>
+												@endif 
+											</td>
 											<td><a  href="admin/user/suauser/{{$us->id}}">
 													<button data-toggle="modal"  class="btn btnsuach" >Sửa</button>
 												</a>

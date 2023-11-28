@@ -1,20 +1,20 @@
 @extends('admin.layout.dashadmin');
-@section('title','Quản Lý Giáo Viên');
+@section('title','Danh sách Giáo Viên');
 @section('main')
 <div class="design_cauhoi">
 
-	<a href="admin/giaovien/themgiaovien"><button data-toggle="modal" data-target="#modal_form_horizontal2" type="button" style="background: #213351" class="btn btn-primary">Thêm
-		</button></a>
-	<a href="importgiaovien"> <button type="button" style="background: #213351" class="btn btn-primary">Import</button></a>
+	<!-- <a href="admin/giaovien/themgiaovien"><button data-toggle="modal" data-target="#modal_form_horizontal2" type="button" style="background: #213351" class="btn btn-primary">Thêm
+		</button></a> -->
+	<!-- <a href="importgiaovien"> <button type="button" style="background: #213351" class="btn btn-primary">Import</button></a>
 	<a href="export"><button type="button" style="background: #213351" class="btn btn-primary">Export</button></a>
-
+ -->
 
 
 </div>
 
 <div class="panel panel-default">
 	<div class="panel-heading">
-		<h6 class="panel-title"><i class="fas fa-chalkboard-teacher"></i>QUẢN LÝ GIÁO VIÊN</h6>
+		<h6 class="panel-title"><i class="fas fa-chalkboard-teacher"></i>DANH SÁCH GIÁO VIÊN</h6>
 	</div>
 	<div class="datatable">
 		@if(session('thongbao'))
@@ -30,8 +30,8 @@
 					<th>Hình ảnh</th>
 					<th>Địa chỉ</th>
 					<th>Số điện thoại</th>
-					<th>Sửa</th>
-					<th>Xóa</th>
+					<!-- <th>Sửa</th>
+					<th>Xóa</th> -->
 				</tr>
 			</thead>
 			<tbody>
@@ -45,14 +45,14 @@
 						<td>{{$gv->diachi}}</td>
 						<td>{{$gv->sdt}}</td>
 
-						<td><a href="../suagiaovien/{{$gv->id_gv}}">
+						<!-- <td><a href="../suagiaovien/{{$gv->id_gv}}">
 								<button data-toggle="modal" class="btn btnsuach">Sửa</button>
 							</a>
 						</td>
 						<td><a onclick="return confirm('Bạn có chắc chắn muốn xóa không?')" href="xoagiaovien/{{$gv->id_gv}}">
 								<button type="button" class="btn btnxoach">Xóa</button>
 							</a>
-						</td>
+						</td> -->
 
 					</tr>
 				<?php endforeach ?>

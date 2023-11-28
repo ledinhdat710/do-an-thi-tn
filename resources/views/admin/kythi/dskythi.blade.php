@@ -6,8 +6,8 @@
                
                    <a href="themdethi"><button data-toggle="modal" data-target="#modal_form_horizontal2" class="btn btnthem" >Thêm
                    </button></a>
-                   <a href="export"><button type="button" class="btn btnthem" >Export</button></a>
-                  <a href="import"> <button type="button" class="btn btnthem" >Import</button></a>
+                   <!-- <a href="export"><button type="button" class="btn btnthem" >Export</button></a>
+                  <a href="import"> <button type="button" class="btn btnthem" >Import</button></a> -->
 					
               
 </div>

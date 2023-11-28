@@ -17,6 +17,7 @@
 		<div class="alert alert-{{Session::get('flag')}}">{{Session::get('message')}} </div>
 		@endif
 	</div>
+	
 	<form action="dangky" method="post" enctype="multipart/form-data">
 		<div class="form-area">
 			<div class="img-area">
@@ -47,7 +48,7 @@
 				</td>
 			</tr>
 			<tr class="tbl">
-				<p> &nbsp; &nbsp;Hình ảnh</p>
+				<p required=""> &nbsp; &nbsp;Hình ảnh</p>
 				<td><input type="file" class="from-control " name="hinhanh" />
 
 				</td>
@@ -64,14 +65,14 @@
 			</tr>
 			<tr class="tbl">
 				<p> &nbsp; &nbsp;Địa chỉ</p>
-				<td><input type="text" class="from-control nhaploai" placeholder="  Nhập địa chỉ" name="tenloai" />
+				<td><input type="text"required="" class="from-control nhaploai" placeholder="  Nhập địa chỉ" name="tenloai" />
 
 				</td>
 			</tr>
 
 			<tr class="tbl">
 				<p> &nbsp; &nbsp;Số điện thoại</p>
-				<td><input type="text" class="from-control nhaploai" placeholder="  Nhập số điện thoại" name="tenloai" />
+				<td><input type="text" required=""class="from-control nhaploai" placeholder="  Nhập số điện thoại" name="tenloai" />
 
 				</td>
 			</tr>

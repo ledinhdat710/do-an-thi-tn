@@ -131,11 +131,11 @@ class TrangchuController extends Controller
         'email.email' => 'Vui lòng nhập đúng định dạng email',
         'email.unique' => 'Email đã tồn tại vui lòng nhập email khác!',
         'password.required' => 'Vui lòng nhập password',
-
         'password.min' => 'Password ít nhất 6 ký tự',
         'password.max' => 'Password không quá 20 ký tự',
 
       ]
+      
     );
     //sau khi bắt lỗi xong, lấy dlieu lưu vào trong model
     $user = new User;

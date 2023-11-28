@@ -158,7 +158,7 @@
 					<div class="col-md-4 coso">
 						<h4 class="">SỞ GIÁO DỤC VÀ ĐÀO TẠO</h4>
 						
-						<h5 class="dechinhthuc">TRƯỜNG THPT NAM KHOÁI CHÂU</h5>
+						<!-- <h5 class="dechinhthuc">TRƯỜNG THPT NAM KHOÁI CHÂU</h5> -->
 						<p class="under_gach"></p>
 						
 					</div>

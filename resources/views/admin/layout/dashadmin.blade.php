@@ -329,32 +329,7 @@ Mirrored from demo.interface.club/londinium/index.html by HTTrack Website Copier
 				<ul class="navigation">
 						<li class="active"><a href="dashbroad_ad"><span>Dashboard</span> <i class="icon-screen2"></i></a></li>
 						
-						<li>
-							<a href="{{url('admin/giaovien/dsgiaovien')}}"><span>Danh sách giáo viên</span> <i class="fas fa-chalkboard-teacher"></i></a>
-							<!--<ul>
-									<li>
-										<a href="{{url('admin/giaovien/dsgiaovien')}}"><span style="padding-right: 80px">Danh sách giáo viên</span> <i class="fas fa-chalkboard-teacher"></i> </a>
-									</li>
-									<li>
-										<a href="{{url('admin/giaovien/themgiaovien')}}"><span style="padding-right: 120px">Thêm</span><i class="fas fa-plus"></i> </a>
-									</li>
-									
-							</ul>-->
-						</li>
 						
-						<li>
-							<a href="{{url('admin/hocsinh/dshocsinh')}}"><span>Danh sách học sinh</span> <i class="fas fa-user-graduate"></i></a>
-							<!--<ul>
-									<li>
-										<a href="{{url('admin/hocsinh/dshocsinh')}}"><span style="padding-right: 80px">Danh sách học sinh</span>
-										 <i class="fas fa-user-graduate"></i> </a>
-									</li>
-									<li>
-										<a href="{{url('admin/hocsinh/themhocsinh')}}"><span style="padding-right: 120px">Thêm học sinh</span><i class="fas fa-plus"></i> </a>
-									</li>
-									
-							</ul>-->
-						</li>
 
 						<li>
 							<a href="{{url('admin/kythi/dskythi')}}"><span>Quản lý kỳ thi</span> <i class="fab fa-buromobelexperte"></i></a>
@@ -394,26 +369,26 @@ Mirrored from demo.interface.club/londinium/index.html by HTTrack Website Copier
 						</li>
 
 						<li>
-							<a href="{{url('admin/user/dsuser')}}"><span>Quản lý users</span> <i class="fas fa-users"></i></a>
-							<!--<ul>
+							<a href="{{url('admin/user/dsuser')}}"><span>Quản lý người dùng</span> <i class="fas fa-users"></i></a>
+							<ul>
 								<li>
-									<a href="{{url('admin/user/dsuser')}}"><span style="padding-right: 80px">Danh sách users</span> <i class="fas fa-users"></i> </a>
-								</li>
-								<li><a href="{{url('admin/user/themuser')}}"><span style="padding-right: 50px">Thêm user</span> <i class="fas fa-user-edit"></i> </a></li>
-								
-							</ul>-->
-						</li>
-
-						<!--<li>
-							<a href="{{url('admin/ketqua/dsketqua')}}"><span>Quản lý kết quả</span> <i class="fas fa-file-invoice"></i></a>
+									<a href="{{url('admin/user/dsuser')}}"><span >Danh sách users</span> <i class="fas fa-users" style="float:right"></i> </a>
+								</li> 
+								<!-- <li><a href="{{url('admin/user/themuser')}}"><span style="padding-right: 50px">Thêm user</span> <i class="fas fa-user-edit"></i> </a></li> -->
+							 
+								<li>
+							<a href="{{url('admin/giaovien/dsgiaovien')}}"><span>Danh sách giáo viên</span> <i class="fas fa-chalkboard-teacher" style="float:right"></i></a>
 							
 						</li>
 						
-						<li><a href="bieudo"><span>Biểu đồ</span> <i class="icon-bars"></i></a></li>
 						<li>
-							<a href="#"><span>Cài đặt</span> <i class="fas fa-cog"></i></a>
+							<a href="{{url('admin/hocsinh/dshocsinh')}}"><span>Danh sách học sinh</span> <i class="fas fa-user-graduate"  style="float:right"></i></a>
+							
+						</li>
+							</ul>
+						</li>
+
 						
-						</li>-->
 						
 						
 					

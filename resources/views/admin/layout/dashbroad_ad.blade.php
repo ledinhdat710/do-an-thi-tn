@@ -10,7 +10,7 @@
 			<ul class="info-blocks">
 				
 				
-					<li class="bg-primary ">
+					<!-- <li class="bg-primary ">
 						<div class="top-info">
 							<a href="#">Dashbroad</a>
 							
@@ -18,12 +18,12 @@
 						<a href="dashbroad_ad"><i class="icon-pencil"></i></a>
 						<span class="bottom-info bg-danger">Dashbroad</span>
 						
-					</li>
+					</li> -->
 		
 				<a href="{{url('admin/giaovien/dsgiaovien')}}">
 					<li class="bg-danger">
 						<div class="top-info">
-							<a href="{{url('admin/giaovien/dsgiaovien')}}">Teachers</a>
+							<a href="{{url('admin/giaovien/dsgiaovien')}}">Giáo viên</a>
 							
 						</div>
 						<a href="{{url('admin/giaovien/dsgiaovien')}}"><i class="fas fa-chalkboard-teacher"></i></a>
@@ -35,7 +35,7 @@
 				<a href="{{url('admin/hocsinh/dshocsinh')}}">
 					<li class="bg-success">
 						<div class="top-info">
-							<a href="{{url('admin/hocsinh/dshocsinh')}}">Students</a>
+							<a href="{{url('admin/hocsinh/dshocsinh')}}">Học sinh</a>
 							
 						</div>
 						<a href="{{url('admin/hocsinh/dshocsinh')}}"><i class="fas fa-user-graduate"></i> </a>
@@ -43,21 +43,11 @@
 						
 					</li>
 				</a>
-				<a href="{{url('admin/monthi/dsmonthi')}}">
-					<li class="bg-info monhoc">
-						<div class="top-info">
-							<a href="{{url('admin/monthi/dsmonthi')}}">Subjects</a>
-							
-						</div>
-						<a href="{{url('admin/monthi/dsmonthi')}}"><i class="fas fa-book"></i></a>
-						<span class="bottom-info bg-primary">{{count($monthi)}}</span>
-						
-					</li>
-				</a>
+				
 				<a href="{{url('admin/user/dsuser')}}">
 					<li class="bg-warning">
 						<div class="top-info">
-							<a href="{{url('admin/user/dsuser')}}">Users</a>
+							<a href="{{url('admin/user/dsuser')}}">Tài khoản</a>
 							
 						</div> 
 						<a href="{{url('admin/user/dsuser')}}"><i class="fas fa-user"></i></a>
@@ -65,10 +55,21 @@
 						{{-- <div class="anhmomo4"></div> --}}
 					</li>
 				</a><br><br>
+				<a href="{{url('admin/monthi/dsmonthi')}}">
+					<li class="bg-info monhoc">
+						<div class="top-info">
+							<a href="{{url('admin/monthi/dsmonthi')}}">Môn học</a>
+							
+						</div>
+						<a href="{{url('admin/monthi/dsmonthi')}}"><i class="fas fa-book"></i></a>
+						<span class="bottom-info bg-primary">{{count($monthi)}}</span>
+						
+					</li>
+				</a>
 				<a href="{{url('admin/ketqua/ketqua')}}">
 					<li class="bg-success exam">
 						<div class="top-info">
-							<a href="{{url('admin/ketqua/dsketqua')}}">Results</a>
+							<a href="{{url('admin/ketqua/dsketqua')}}">Lượt thi</a>
 							
 						</div>
 						<a href="{{url('admin/ketqua/dsketqua')}}"><i class="fas fa-file-signature"></i></a>
@@ -79,7 +80,7 @@
 				<a href="{{url('admin/khoi/dskhoi')}}">
 					<li class="bg-primary grade">
 						<div class="top-info">
-							<a href="{{url('admin/khoi/dskhoi')}}">Grades</a>
+							<a href="{{url('admin/khoi/dskhoi')}}">Khối</a>
 						
 						</div>
 
@@ -89,7 +90,7 @@
 					</li>
 				</a>
 				
-					<a href="">
+					<!-- <a href="">
 						<li class="bg-info export">
 							<div class="top-info">
 								<a href="#">Export</a>
@@ -110,8 +111,8 @@
 						<span class="bottom-info bg-primary">Excel</span>
 						{{-- <div class="anhmomo8"></div> --}}
 					</li>
-				</a>
-				<a href="">
+				</a> -->
+				<!-- <a href="">
 					<li class="bg-primary setting">
 						<div class="top-info">
 							<a href="#">Setting</a>
@@ -121,7 +122,7 @@
 						<span class="bottom-info bg-danger">4</span>
 						<div class="anhmomo9"></div>
 					</li>
-				</a>
+				</a> -->
 			</ul>
 			<!-- /info blocks -->
 

@@ -1,12 +1,12 @@
 @extends('admin.layout.dashadmin');
-@section('title','Quản Lý Học Sinh');
+@section('title','Danh sách Học Sinh');
 @section('main')
 <div class="design_cauhoi">
 
-    <a href="admin/hocsinh/themhocsinh"><button data-toggle="modal" data-target="#modal_form_horizontal2" type="button" style="background: #213351" class="btn btn-primary">Thêm
+    <!-- <a href="admin/hocsinh/themhocsinh"><button data-toggle="modal" data-target="#modal_form_horizontal2" type="button" style="background: #213351" class="btn btn-primary">Thêm
         </button></a>
     <a href="importhocsinh"> <button type="button" style="background: #213351" class="btn btn-primary">Import</button></a>
-    <a href="export"><button type="button" style="background: #213351" class="btn btn-primary">Export</button></a>
+    <a href="export"><button type="button" style="background: #213351" class="btn btn-primary">Export</button></a> -->
 
 
 
@@ -14,7 +14,7 @@
 
 <div class="panel panel-default">
     <div class="panel-heading">
-        <h6 class="panel-title"><i class="fas fa-chalkboard-teacher"></i>QUẢN LÝ HỌC SINH</h6>
+        <h6 class="panel-title"><i class="fas fa-chalkboard-teacher"></i>Danh sách HỌC SINH</h6>
     </div>
     <div class="datatable">
         @if(session('thongbao'))
@@ -30,8 +30,8 @@
                     <th>Hình ảnh</th>
                     <th>Địa chỉ</th>
                     <th>Số điện thoại</th>
-                    <th>Sửa</th>
-                    <th>Xóa</th>
+                    <!-- <th>Sửa</th>
+                    <th>Xóa</th> -->
                 </tr>
             </thead>
             <tbody>
@@ -44,15 +44,17 @@
                         <td><img src="imgs/user/{{$hs->hinhanh}}" alt="" width="70" height="90"></td>
                         <td>{{$hs->diachi}}</td>
                         <td>{{$hs->sdt}}</td>
+                        <!-- <td>{{$hs->email}}</td> -->
+                        
 
-                        <td><a href="../suahocsinh/{{$hs->id_hs}}">
+                        <!-- <td><a href="../suahocsinh/{{$hs->id_hs}}">
                                 <button data-toggle="modal" class="btn btnsuach">Sửa</button>
                             </a>
                         </td>
                         <td><a onclick="return confirm('Bạn có chắc chắn muốn xóa không?')" href="xoahocsinh/{{$hs->id_hs}}">
                                 <button type="button" class="btn btnxoach">Xóa</button>
                             </a>
-                        </td>
+                        </td> -->
 
                     </tr>
                 <?php endforeach ?>
