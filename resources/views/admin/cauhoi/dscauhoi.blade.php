@@ -7,8 +7,8 @@
     <a href="themcauhoi">
         <button  class="btn btnthem" >Thêm</button>
     </a>
-    <a href="exportPDF"> <button type="button" style="background: #213351" class="btn btn-primary">Export PDF</button></a> 
-    <a href="export"><button style="background: #213351" class="btn btn-primary" >Export Excel</button></a>
+    <!-- <a href="exportPDF"> <button type="button" style="background: #213351" class="btn btn-primary">Export PDF</button></a> 
+    <a href="export"><button style="background: #213351" class="btn btn-primary" >Export Excel</button></a> -->
     <a href="import"> <button style="background: #213351" class="btn btn-primary" >Import Excel</button></a>
 					            
 </div>

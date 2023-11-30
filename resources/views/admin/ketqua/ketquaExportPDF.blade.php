@@ -157,7 +157,7 @@
 		}
 
 		table {
-			font-family: arial, sans-serif;
+			font-family: Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
 			border-collapse: collapse;
 			width: 650px;
 			margin-left: 5px;
@@ -178,7 +178,7 @@
 </head>
 
 <body>
-	<div class="container-fluid">
+	<div class="container-fluid" style="font-family: Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;">
 		<div class="container chitietdethi" id="HTMLtoPDF">
 			<div class="row head">
 				<div class="row">
@@ -212,7 +212,7 @@
 							<th>Họ tên</th>
 							<td>Ngày sinh</td>
 							<th>Kỳ thi</th>
-							<th>Tên môn</th>
+							<th>Tên đề thi</th>
 							<th>Điểm</th>
 							<th>Xếp loại</th>
 

@@ -238,7 +238,7 @@
 			@endfor
 		@endforeach --}}
 			{{-- <p class="phantrang">{!!$ctdethi->links()!!}</p> --}}
-		<a href="../../tructuyen/{{$dethi->id_de}}"><button  class="next-btn"  type="button">NỘP BÀI</button></a>
+		<a href="../../tructuyen/{{$dethi->id_de}}"><button  class="next-btn"  type="button" style="float:right">NỘP BÀI</button></a>
 			@endforeach
 	</form>
 	

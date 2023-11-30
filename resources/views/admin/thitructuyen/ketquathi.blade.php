@@ -1,9 +1,12 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Thi Trực Tuyến</title>
 	<meta name="csrf-token" content="{{ csrf_token() }}">
+
 <style>
 	{
 		margin: 0;
@@ -13,7 +16,7 @@
 	}
 	body{
 		/*background-color: #6cf;*/
-		background-image: url(../imgs/gbfooter.jpg);
+		/* background-image: url(../imgs/gbfooter.jpg); */
 	}
 
 	.title{
@@ -31,6 +34,8 @@
 		overflow: hidden;
 		box-shadow: 0 20px 50px rgba(0,0,0,.5);
 		border: 2px solid rgba(0,0,0,.5);
+		font-family:Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
+		
 	}
 	.box:before{
 		content: '';
@@ -247,6 +252,7 @@
 	}
 </style>
 </head>
+
 <body>
 	<input type="hidden" name="_token" value="{{csrf_token()}}">
 	<input type="hidden" value="{{$email}}" name="email">
@@ -281,13 +287,15 @@
 	</div>
 	<a href="../lichsuthi/{{$ct->id_de}}"><div class="login" > Lịch Sử Bài Làm</div></a>
 	@endforeach
-	<p class="direction"><img src="../imgs/banner/direction.png" alt="" width="508" height="630"></p>
+	<!-- <p class="direction"><img src="../imgs/banner/direction.png" alt="" width="508" height="630"></p>
 	<p class="muctieu1">You can do it!</p>
 	<p class="muctieu2">Finish your goal!</p>
 	<p class="muctieu3">Try more!</p>
 	<p class="muctieu4">You did well!</p>
-	<p class="muctieu5">Good luck to you!</p>
+	<p class="muctieu5">Good luck to you!</p> -->
+	
 </body>
+
 <script>
 			
 			

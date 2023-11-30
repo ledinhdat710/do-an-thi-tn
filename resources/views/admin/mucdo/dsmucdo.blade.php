@@ -1,5 +1,5 @@
 @extends('admin.layout.master');
-@section('title','Quản Lý Mức Độ');
+@section('title','Quản Lý Mức Độ Câu hỏi');
 @section('main')
 <style>
 	.nhaploaimodel{
@@ -22,9 +22,9 @@
                    {{-- <a href="themdethi"> --}}
                    		<button data-toggle="modal" data-target="#them" style="background: #213351" class="btn btn-primary">Thêm</button>
                    {{-- </a> --}}
-                   <a href="exportmd"><button style="background: #213351" class="btn btn-primary">Export</button></a>
+                   <!-- <a href="exportmd"><button style="background: #213351" class="btn btn-primary">Export</button></a>
                   <a href="importmd"> <button style="background: #213351" class="btn btn-primary">Import</button></a>
-					
+					 -->
               
 </div>
 
