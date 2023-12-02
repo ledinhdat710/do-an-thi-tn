@@ -46,6 +46,13 @@ class TrangchuController extends Controller
       ->where('kythi.id_ky', '=', '2')
       ->where('trangthai', 'like', '%' . 'Thi thử' . '%')->paginate(8);
 
+    $dethi4 = DB::table('dethi')->orderBy('id_de', 'DESC')
+      ->join('monthi', 'monthi.id_mh', '=', 'dethi.id_mh')
+      ->join('kythi', 'kythi.id_ky', '=', 'dethi.id_ky')
+      ->select('monthi.tenmh', 'monthi.hinhanh', 'kythi.tenky', 'socau', 'thoigianthi', 'tendethi', 'id_de')
+      ->where('kythi.id_ky', '=', '1')
+      ->where('trangthai', 'like', '%' . 'Thi thử' . '%')->paginate(8);
+
     // $menu = DB::table('menu')
     // ->select('tenmenu','menu.id_menu')
     // ->get()->toArray();
@@ -55,7 +62,7 @@ class TrangchuController extends Controller
     // ->select('tenmenu','menucon.noidung')
     // ->where('menucon.id_menu','=', '5')
     //  ->get()->toArray();
-    return view('admin.layout.trangchu', ['dethi' => $dethi, 'dethi2' => $dethi2, 'dethi3' => $dethi3]);
+    return view('admin.layout.trangchu', ['dethi' => $dethi, 'dethi2' => $dethi2, 'dethi3' => $dethi3, 'dethi4' => $dethi4]);
   }
 
 
@@ -114,7 +121,7 @@ class TrangchuController extends Controller
   }
   public function postdangky(Request $request)
   {
-    Log::info('mymessage'); 
+    Log::info('mymessage');
     $this->validate(
       $request,
       [
@@ -135,7 +142,7 @@ class TrangchuController extends Controller
         'password.max' => 'Password không quá 20 ký tự',
 
       ]
-      
+
     );
     //sau khi bắt lỗi xong, lấy dlieu lưu vào trong model
     $user = new User;
@@ -167,7 +174,7 @@ class TrangchuController extends Controller
     $dethi = DB::table('dethi')
       ->join('monthi', 'monthi.id_mh', '=', 'dethi.id_mh')
       ->join('kythi', 'kythi.id_ky', '=', 'dethi.id_ky')
-      ->select('monthi.tenmh', 'monthi.hinhanh', 'kythi.tenky', 'socau', 'thoigianthi', 'id_de')
+      ->select('dethi.tendethi', 'monthi.tenmh', 'monthi.hinhanh', 'kythi.tenky', 'socau', 'thoigianthi', 'id_de')
       ->where('kythi.id_ky', '=', '4')
       ->where('trangthai', 'like', '%' . 'Thi thử' . '%')
 
@@ -183,13 +190,43 @@ class TrangchuController extends Controller
     $dethi = DB::table('dethi')
       ->join('monthi', 'monthi.id_mh', '=', 'dethi.id_mh')
       ->join('kythi', 'kythi.id_ky', '=', 'dethi.id_ky')
-      ->select('monthi.tenmh', 'monthi.hinhanh', 'kythi.tenky', 'socau', 'thoigianthi', 'id_de')
+      ->select('dethi.tendethi', 'monthi.tenmh', 'monthi.hinhanh', 'kythi.tenky', 'socau', 'thoigianthi', 'id_de')
       ->where('kythi.id_ky', '=', '5')
       ->where('trangthai', 'like', '%' . 'Thi thử' . '%')
 
       ->get()->toArray();
 
     return view('admin.tonghopdethi.thihocky', ['dethi' => $dethi]);
+  }
+
+  public function getthi15p()
+  {
+
+    $dethi = DB::table('dethi')
+      ->join('monthi', 'monthi.id_mh', '=', 'dethi.id_mh')
+      ->join('kythi', 'kythi.id_ky', '=', 'dethi.id_ky')
+      ->select('dethi.tendethi', 'monthi.tenmh', 'monthi.hinhanh', 'kythi.tenky', 'socau', 'thoigianthi', 'id_de')
+      ->where('kythi.id_ky', '=', '1')
+      ->where('trangthai', 'like', '%' . 'Thi thử' . '%')
+
+      ->get()->toArray();
+
+    return view('admin.tonghopdethi.thi15p', ['dethi' => $dethi]);
+  }
+
+  public function getthi45p()
+  {
+
+    $dethi = DB::table('dethi')
+      ->join('monthi', 'monthi.id_mh', '=', 'dethi.id_mh')
+      ->join('kythi', 'kythi.id_ky', '=', 'dethi.id_ky')
+      ->select('dethi.tendethi', 'monthi.tenmh', 'monthi.hinhanh', 'kythi.tenky', 'socau', 'thoigianthi', 'id_de')
+      ->where('kythi.id_ky', '=', '2')
+      ->where('trangthai', 'like', '%' . 'Thi thử' . '%')
+
+      ->get()->toArray();
+
+    return view('admin.tonghopdethi.thi45p', ['dethi' => $dethi]);
   }
 
   public function thamgiathi($id)

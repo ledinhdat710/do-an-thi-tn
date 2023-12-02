@@ -48,8 +48,8 @@
 							<a href="dethi/{{$dt->id_de}}" style="color: #000">
 								<div class="col-md-3 dethi ">
 									<img src="imgs/monhoc/{{ $dt->hinhanh}}" width="199" height="150" alt="">
-									<p class="tenmon">{{ $dt->tenmh}}</p>
-									<p class="title">Đề thi {{ $dt->tendethi}} gồm {{ $dt->socau}} câu, thời gian thi
+									<p class="tenmon">{{ $dt->tendethi}}</p>
+									<p class="title">Đề thi {{ $dt->tenmh}} gồm {{ $dt->socau}} câu, thời gian thi
 										{{ $dt->thoigianthi}} phút
 									</p>
 									<p class="danhgia">
@@ -73,8 +73,8 @@
 							<a href="hocsinh/dethi/{{$dt2->id_de}}" style="color: #000">
 								<div class="col-md-3 dethi">
 									<img src="imgs/monhoc/{{ $dt2->hinhanh}}" width="199" height="150" alt="">
-									<p class="tenmon">{{ $dt2->tenmh}}</p>
-									<p class="title">Đề thi {{ $dt2->tendethi}} gồm {{ $dt2->socau}} câu, thời gian thi {{ $dt2->thoigianthi}} phút</p>
+									<p class="tenmon">{{ $dt2->tendethi}}</p>
+									<p class="title">Đề thi {{ $dt2->tenmh}} gồm {{ $dt2->socau}} câu, thời gian thi {{ $dt2->thoigianthi}} phút</p>
 									<p class="danhgia">
 
 										<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
@@ -93,8 +93,30 @@
 							<a href="dethi/{{$dt3->id_de}}" style="color: #000">
 								<div class="col-md-3 dethi">
 									<img src="imgs/monhoc/{{ $dt3->hinhanh}}" width="199" height="150" alt="">
-									<p class="tenmon">{{ $dt3->tenmh}}</p>
-									<p class="title"><b>Đề thi {{ $dt3->tendethi}}</b> gồm {{ $dt3->socau}} câu, thời gian thi {{ $dt3->thoigianthi}} phút</p>
+									<p class="tenmon">{{ $dt3->tendethi}}</p>
+									<p class="title"><b>Đề thi {{ $dt3->tenmh}}</b> gồm {{ $dt3->socau}} câu, thời gian thi {{ $dt3->thoigianthi}} phút</p>
+									<p class="danhgia">
+
+										<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+
+
+										<i class="fas fa-users hscmt"></i> 134
+									</p>
+								</div>
+							</a>
+							@endforeach
+						</div>
+
+					</div>
+
+					<div id="menu3" class="tab-pane fade">
+						<div class="row hinhanh">
+							@foreach($dethi4 as $dt4)
+							<a href="dethi/{{$dt4->id_de}}" style="color: #000">
+								<div class="col-md-3 dethi">
+									<img src="imgs/monhoc/{{ $dt4->hinhanh}}" width="199" height="150" alt="">
+									<p class="tenmon">{{ $dt4->tendethi}}</p>
+									<p class="title"><b>Đề thi {{ $dt4->tenmh}}</b> gồm {{ $dt4->socau}} câu, thời gian thi {{ $dt4->thoigianthi}} phút</p>
 									<p class="danhgia">
 
 										<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>

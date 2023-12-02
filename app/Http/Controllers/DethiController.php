@@ -48,7 +48,7 @@ class DethiController extends Controller
             ->join('monthi', 'monthi.id_mh', '=', 'dethi.id_mh')
             ->join('khoi', 'khoi.id_khoi', '=', 'dethi.id_khoi')
             ->join('kythi', 'kythi.id_ky', '=', 'dethi.id_ky')
-            ->select('monthi.tenmh', 'monthi.hinhanh', 'kythi.tenky', 'socau', 'thoigianthi', 'id_de', 'khoi.tenkhoi')
+            ->select('dethi.tendethi', 'monthi.tenmh', 'monthi.hinhanh', 'kythi.tenky', 'socau', 'thoigianthi', 'id_de', 'khoi.tenkhoi')
             ->where('id_de', '=', $id)
             ->get()->toArray();
 
@@ -56,7 +56,7 @@ class DethiController extends Controller
             ->join('monthi', 'monthi.id_mh', '=', 'dethi.id_mh')
             ->join('khoi', 'khoi.id_khoi', '=', 'dethi.id_khoi')
             ->join('kythi', 'kythi.id_ky', '=', 'dethi.id_ky')
-            ->select('monthi.tenmh', 'monthi.hinhanh', 'kythi.tenky', 'socau', 'thoigianthi', 'id_de', 'khoi.tenkhoi')
+            ->select('dethi.tendethi', 'monthi.tenmh', 'monthi.hinhanh', 'kythi.tenky', 'socau', 'thoigianthi', 'id_de', 'khoi.tenkhoi')
             ->where('kythi.tenky', 'like', '%' . 'THPT Quốc Gia' . '%')->paginate(4);
 
         $binhluan = DB::table('thaoluandethi')
@@ -129,7 +129,7 @@ class DethiController extends Controller
     {
         $this->validate(
             $request,
-            [    
+            [
                 'tendethi' => 'required',
                 'tenkythi' => 'required',
                 'namekhoi' => 'required',

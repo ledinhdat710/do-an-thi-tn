@@ -102,11 +102,11 @@
 								<a href="{{url('thihocki')}}"><span>Kiểm tra học kỳ </span><i class="fas fa-angle-right ic2"> </i></a>
 							</li>
 							<li>
-								<a href="{{url('kt15phut')}}"><span>Kiểm tra 15 phút</span> <i class="fas fa-angle-right ic3"> </i></a>
+								<a href="{{url('thi15p')}}"><span>Kiểm tra 15 phút</span> <i class="fas fa-angle-right ic3"> </i></a>
 							</li>
 
 							<li>
-								<a href="{{url('kt45phut')}}"><span>Kiểm tra 45 phút</span> <i class="fas fa-angle-right ic3"> </i></a>
+								<a href="{{url('thi45p')}}"><span>Kiểm tra 45 phút</span> <i class="fas fa-angle-right ic3"> </i></a>
 							</li>
 						</ul>
 					</div>
