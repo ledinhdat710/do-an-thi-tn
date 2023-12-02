@@ -12,11 +12,12 @@
 		margin: 0;
 		padding: 0;
 		
-		font-family: sans-serif;
+		font-family: Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
 	}
 	body{
 		/*background-color: #6cf;*/
 		/* background-image: url(../imgs/gbfooter.jpg); */
+		font-family: Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
 	}
 
 	.title{
@@ -34,7 +35,7 @@
 		overflow: hidden;
 		box-shadow: 0 20px 50px rgba(0,0,0,.5);
 		border: 2px solid rgba(0,0,0,.5);
-		font-family:Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
+	
 		
 	}
 	.box:before{
@@ -64,6 +65,7 @@
 		padding: 30px;
 		text-align: center;
 		box-shadow: 0 5px 10px  rgba(0,0,0,.5);
+		
 	}
 	
 	
@@ -211,8 +213,8 @@
 		height: 30px;
 		font-weight: bold;
 		border-radius: 5px;
-		margin-left: 660px;
-		margin-top: 600px;
+		/* margin-left: 660px; */
+		/* margin-top: 600px; */
 	}
 	
 	a{
@@ -284,8 +286,10 @@
 		</p>
 			
 		</div>
+		
 	</div>
-	<a href="../lichsuthi/{{$ct->id_de}}"><div class="login" > Lịch Sử Bài Làm</div></a>
+	<a href="{{url('trangchu') }}"><div class="login" > Về trang chủ</div></a>
+	<a href="../lichsuthi/{{$ct->id_de}}"><div class="login" > Chi tiết đáp án</div></a>
 	@endforeach
 	<!-- <p class="direction"><img src="../imgs/banner/direction.png" alt="" width="508" height="630"></p>
 	<p class="muctieu1">You can do it!</p>

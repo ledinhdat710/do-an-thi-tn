@@ -1,5 +1,5 @@
 @extends('admin.layout.dashadmin');
-@section('title','Quản Lý Hệ Thống');
+@section('title','Dashboard');
 @section('main')
 
 	<!-- Page header -->
@@ -58,7 +58,7 @@
 				<a href="{{url('admin/monthi/dsmonthi')}}">
 					<li class="bg-info monhoc">
 						<div class="top-info">
-							<a href="{{url('admin/monthi/dsmonthi')}}">Môn học</a>
+							<a href="{{url('admin/monthi/dsmonthi')}}">Môn thi</a>
 							
 						</div>
 						<a href="{{url('admin/monthi/dsmonthi')}}"><i class="fas fa-book"></i></a>
@@ -69,11 +69,11 @@
 				<a href="{{url('admin/ketqua/ketqua')}}">
 					<li class="bg-success exam">
 						<div class="top-info">
-							<a href="{{url('admin/ketqua/dsketqua')}}">Lượt thi</a>
+							<a href="{{url('admin/kythi/dskythi')}}">Kỳ thi</a>
 							
 						</div>
-						<a href="{{url('admin/ketqua/dsketqua')}}"><i class="fas fa-file-signature"></i></a>
-						<span class="bottom-info bg-primary">{{count($ketqua)}}</span>
+						<a href="{{url('admin/kythi/dskythi')}}"><i class="fas fa-file-signature"></i></a>
+						<span class="bottom-info bg-primary">{{count($kythi)}}</span>
 						{{-- <div class="anhmomo5"></div> --}}
 					</li>
 				</a>
@@ -129,11 +129,11 @@
 
 			
 
-			<div id="container" style="width: 1000px; height: 600px;margin: 0 auto;padding-top: 30px; padding-bottom: 100px;"></div>
+			<!-- <div id="container" style="width: 1000px; height: 600px;margin: 0 auto;padding-top: 30px; padding-bottom: 100px;"></div> -->
 
 
 
-		<script type="text/javascript">
+		<!-- <script type="text/javascript">
 
 Highcharts.chart('container', {
     chart: {
@@ -200,7 +200,7 @@ Highcharts.chart('container', {
 
     }]
 });
-		</script>
+		</script> -->
 
 
 

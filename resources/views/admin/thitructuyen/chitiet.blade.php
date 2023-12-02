@@ -10,7 +10,7 @@
 					</div>
 				
 					<div class="col-md-5 " >
-					<h3 class="thongtinctde" style="text-transform: uppercase;"><b ">ĐỀ {{ $dt->tenky}}</b></h3>
+					<h3 class="thongtinctde" style="text-transform: uppercase;"><b >ĐỀ {{ $dt->tendethi}}</b></h3>
 					<p><b>Môn thi:</b> {{ $dt->tenmh}}</p>
 					<p><b>Số câu:</b>  {{ $dt->thoigianthi}} câu</p>
 					<p><b>Thời gian thi:</b> {{ $dt->socau}} phút</p>

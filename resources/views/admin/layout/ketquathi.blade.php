@@ -19,6 +19,7 @@
                         <th>Thời gian thi</th>
                         <th>Điểm</th>
                         <th>Xếp loại</th>
+                        <th>Chi tiết</th>
 
                     </tr>
                 </thead>
@@ -33,7 +34,7 @@
                             <td>{{$kq->thoigianthi}} phút</td>
                             <td>{{$kq->diem}}</td>
                             <td>{{$kq->xeploai}}</span></td>
-
+                            <td><a  href="../lichsuthi/{{$kq->id_de}}"><button style="font-weigth:bold;">Chi tiết</button></a></td>
                         </tr>
                     <?php endforeach ?>
                 </tbody>

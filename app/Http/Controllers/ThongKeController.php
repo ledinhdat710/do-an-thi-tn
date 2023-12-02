@@ -29,6 +29,7 @@ class ThongKeController extends Controller
     	$khoi = Khoi::all();
     	$user = User::all();
     	$ketqua = KetQua::all();
+        $kythi = KyThi::all();
     	 $diemlietmh1 = DB::table('ketqua')
         ->where('diem','<=','1') ->where('id_mh','=','1')->get()->pluck('diem');
         $diemtbmh1 = DB::table('ketqua')
@@ -130,7 +131,7 @@ class ThongKeController extends Controller
     	
     	
 
-    	 return view('admin.layout.dashbroad_ad',['giaovien'=>$giaovien, 'hocsinh'=>$hocsinh, 'monthi'=>$monthi,'khoi'=>$khoi, 'user'=>$user,'ketqua'=>$ketqua,'diemlietmh1'=>$diemlietmh1,'diemtbmh1'=>$diemtbmh1,'diemkhamh1'=>$diemkhamh1,'diemgioimh1'=>$diemgioimh1,'diemlietmh2'=>$diemlietmh2,'diemtbmh2'=>$diemtbmh2,'diemkhamh2'=>$diemkhamh2,'diemgioimh2'=>$diemgioimh2,'diemlietmh3'=>$diemlietmh3,'diemtbmh3'=>$diemtbmh3,'diemkhamh3'=>$diemkhamh3,'diemgioimh3'=>$diemgioimh3,'diemlietmh4'=>$diemlietmh4,'diemtbmh4'=>$diemtbmh4,'diemkhamh4'=>$diemkhamh4,'diemgioimh4'=>$diemgioimh4,'diemlietmh5'=>$diemlietmh5,'diemtbmh5'=>$diemtbmh5,'diemkhamh5'=>$diemkhamh5,'diemgioimh5'=>$diemgioimh5,'diemlietmh6'=>$diemlietmh6,'diemtbmh6'=>$diemtbmh6,'diemkhamh6'=>$diemkhamh6,'diemgioimh6'=>$diemgioimh6,'diemlietmh7'=>$diemlietmh7,'diemtbmh7'=>$diemtbmh7,'diemkhamh7'=>$diemkhamh7,'diemgioimh7'=>$diemgioimh7,'diemlietmh8'=>$diemlietmh8,'diemtbmh8'=>$diemtbmh8,'diemkhamh8'=>$diemkhamh8,'diemgioimh8'=>$diemgioimh8,'diemlietmh9'=>$diemlietmh9,'diemtbmh9'=>$diemtbmh9,'diemkhamh9'=>$diemkhamh9,'diemgioimh9'=>$diemgioimh9,'diemlietmh10'=>$diemlietmh10,'diemtbmh10'=>$diemtbmh10,'diemkhamh10'=>$diemkhamh10,'diemgioimh10'=>$diemgioimh10,'diemlietmh11'=>$diemlietmh11,'diemtbmh11'=>$diemtbmh11,'diemkhamh11'=>$diemkhamh11,'diemgioimh11'=>$diemgioimh11]);
+    	 return view('admin.layout.dashbroad_ad',['giaovien'=>$giaovien, 'hocsinh'=>$hocsinh, 'monthi'=>$monthi,'khoi'=>$khoi, 'user'=>$user,'ketqua'=>$ketqua,'kythi'=>$kythi,'diemlietmh1'=>$diemlietmh1,'diemtbmh1'=>$diemtbmh1,'diemkhamh1'=>$diemkhamh1,'diemgioimh1'=>$diemgioimh1,'diemlietmh2'=>$diemlietmh2,'diemtbmh2'=>$diemtbmh2,'diemkhamh2'=>$diemkhamh2,'diemgioimh2'=>$diemgioimh2,'diemlietmh3'=>$diemlietmh3,'diemtbmh3'=>$diemtbmh3,'diemkhamh3'=>$diemkhamh3,'diemgioimh3'=>$diemgioimh3,'diemlietmh4'=>$diemlietmh4,'diemtbmh4'=>$diemtbmh4,'diemkhamh4'=>$diemkhamh4,'diemgioimh4'=>$diemgioimh4,'diemlietmh5'=>$diemlietmh5,'diemtbmh5'=>$diemtbmh5,'diemkhamh5'=>$diemkhamh5,'diemgioimh5'=>$diemgioimh5,'diemlietmh6'=>$diemlietmh6,'diemtbmh6'=>$diemtbmh6,'diemkhamh6'=>$diemkhamh6,'diemgioimh6'=>$diemgioimh6,'diemlietmh7'=>$diemlietmh7,'diemtbmh7'=>$diemtbmh7,'diemkhamh7'=>$diemkhamh7,'diemgioimh7'=>$diemgioimh7,'diemlietmh8'=>$diemlietmh8,'diemtbmh8'=>$diemtbmh8,'diemkhamh8'=>$diemkhamh8,'diemgioimh8'=>$diemgioimh8,'diemlietmh9'=>$diemlietmh9,'diemtbmh9'=>$diemtbmh9,'diemkhamh9'=>$diemkhamh9,'diemgioimh9'=>$diemgioimh9,'diemlietmh10'=>$diemlietmh10,'diemtbmh10'=>$diemtbmh10,'diemkhamh10'=>$diemkhamh10,'diemgioimh10'=>$diemgioimh10,'diemlietmh11'=>$diemlietmh11,'diemtbmh11'=>$diemtbmh11,'diemkhamh11'=>$diemkhamh11,'diemgioimh11'=>$diemgioimh11]);
     }
     
 

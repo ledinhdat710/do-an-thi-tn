@@ -1,5 +1,5 @@
 @extends('admin.layout.dashadmin');
-@section('title','Danh sách Học Sinh');
+@section('title','Danh sách học sinh');
 @section('main')
 <div class="design_cauhoi">
 
@@ -14,7 +14,7 @@
 
 <div class="panel panel-default">
     <div class="panel-heading">
-        <h6 class="panel-title"><i class="fas fa-chalkboard-teacher"></i>Danh sách HỌC SINH</h6>
+        <h6 class="panel-title"><i class="fas fa-chalkboard-teacher"></i>Danh sách học sinh</h6>
     </div>
     <div class="datatable">
         @if(session('thongbao'))

@@ -66,7 +66,7 @@
 				@else
 
 				<a href="{{url('dangky')}}">
-					<div class="regis " style="width: 120px;"><i class="fas fa-sign-in-alt"></i> Đăng ký</div>
+					<div class="regis " style="width: 120px;"><i class="fas fa-address-card"></i>    Đăng ký</div>
 				</a>
 				@endif
 			</div>
