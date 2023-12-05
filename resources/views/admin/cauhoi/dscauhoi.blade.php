@@ -1,5 +1,5 @@
 @extends('admin.layout.master');
-@section('title','Ngân Hàng Câu Hỏi');
+@section('title','Quản lý Ngân Hàng Câu Hỏi');
 @section('main')
 
 <div class="design_cauhoi">
@@ -17,7 +17,7 @@
 
 <div class="panel panel-default">
 			                <div class="panel-heading">
-			                	<h6 class="panel-title"><i class="fas fa-chalkboard-teacher"></i>NGÂN HÀNG CÂU HỎI</h6></div>
+			                	<h6 class="panel-title"><i class="fas fa-chalkboard-teacher"></i>QUẢN LÝ NGÂN HÀNG CÂU HỎI</h6></div>
 			                <div class="datatable">
 			                	 @if(count($errors)>0)
 								<div class="alert alert-danger">
@@ -32,6 +32,7 @@
 									<span class="glyphicon glyphicon-ok icon-oke" ></span> {{session('thongbao')}}
 								</div>
 							@endif
+
  <table class="table tbl">
 
 				                    <thead>

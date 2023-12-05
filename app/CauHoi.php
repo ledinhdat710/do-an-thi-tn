@@ -28,9 +28,9 @@ class CauHoi extends Model
     	return $this->beLongsTo('App\Khoi','id_khoi', 'id_khoi');
     }
 
-     public function dapandung(){
-    	return $this->hasMany('App\DapAnDung','id_cauhoi', 'id_cauhoi');
-    }
+    //  public function dapandung(){
+    // 	return $this->hasMany('App\DapAnDung','id_cauhoi', 'id_cauhoi');
+    // }
 
     public function ctdethi(){
         return $this->beLongsTo('App\CtDeThi','id_cauhoi', 'id_cauhoi');

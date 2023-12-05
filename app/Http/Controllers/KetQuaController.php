@@ -48,7 +48,8 @@ class KetQuaController extends Controller
 			->join('dethi', 'dethi.id_de', 'ketqua.id_de')
 			->join('monthi', 'monthi.id_mh', 'dethi.id_mh')
 			->join('kythi', 'kythi.id_ky', 'dethi.id_ky')->get()->toArray();
-
+			
+			
 		// $diem = DB::table('ketqua')->pluck('diem');
 		// // dd($diem[0]);
 		// 	$xeploai='';

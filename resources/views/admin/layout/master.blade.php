@@ -334,48 +334,26 @@ Mirrored from demo.interface.club/londinium/index.html by HTTrack Website Copier
 						<li class="active"><a href="{{asset('giaovien/dash/dashbroad_gv')}}"><span>Dashboard</span> <i class="icon-screen2"></i></a></li>
 						
 						<li>
-							<a href=""><span>Loại câu hỏi</span> <i class="fas fa-question"></i></a>
-							<ul>
-									<li>
-										<a href="{{url('giaovien/loaicauhoi/dsloai')}}"><span style="padding-right: 80px">Danh sách loại</span> <i class="fas fa-list"></i> </a>
-									</li>
-									<li>
-										<a href="{{url('giaovien/loaicauhoi/themloai')}}"><span style="padding-right: 120px">Thêm loại</span><i class="fas fa-plus"></i> </a>
-									</li>
-									
-							</ul>
+							<a href="{{url('giaovien/loaicauhoi/dsloai')}}"><span>Quản lý loại câu hỏi</span> <i class="fas fa-question"></i></a>
+							
 						</li>
-						
 						<li>
-							<a href=""><span>Ngân hàng câu hỏi</span> <i class="fas fa-question"></i></a>
-							<ul>
-									<li>
-										<a href="{{url('giaovien/cauhoi/dscauhoi')}}"><span style="padding-right: 80px">Danh sách câu hỏi</span> <i class="fas fa-list"></i> </a>
-									</li>
-									<li>
-										<a href="{{url('giaovien/cauhoi/themcauhoi')}}"><span style="padding-right: 120px">Thêm câu hỏi</span><i class="fas fa-plus"></i> </a>
-									</li>
-									
-							</ul>
+							<a href="{{url('giaovien/mucdo/dsmucdo')}}"><span>Quản lý mức độ câu hỏi</span><i class="fas fa-file-signature"></i></a>
+						
+						</li>
+						<li>
+							<a href="{{url('giaovien/cauhoi/dscauhoi')}}"><span>Quản lý ngân hàng câu hỏi</span> <i class="fas fa-question"></i></a>
+							
 						</li>
 						<li>
 							<a href="{{url('giaovien/dethi/dsdethi')}}"><span>Quản lý đề thi</span> <i class="fab fa-buromobelexperte"></i></a>
-							<ul>
-								<li>
-									<a href="{{url('giaovien/dethi/dsdethi')}}"><span style="padding-right: 80px">Danh sách đề thi</span> <i class="fas fa-list"></i> </a>
-								</li>
-								<li><a href="{{url('giaovien/dethi/themdethi')}}"><span style="padding-right: 50px">Thiết kế ma trận đề thi</span> <i class="fas fa-edit"></i> </a></li>
-								
-							</ul>
+							
 						</li>
 						<!-- <li>
 								<a href="loaicauhoi"><span>Quản lý loại câu hỏi</span>  <i class="fas fa-question-circle"></i></a>
 							
 						</li> -->
-						<li>
-							<a href="{{url('giaovien/mucdo/dsmucdo')}}"><span>Quản lý mức độ câu hỏi</span><i class="fas fa-file-signature"></i></a>
 						
-						</li>
 						
 						<li>
 							<a href="{{url('giaovien/ketqua/dsketqua')}}"><span>Quản lý kết quả</span> <i class="fas fa-file-invoice"></i></a>

@@ -1,5 +1,6 @@
 @extends('admin.layout.index')
 @section('body')
+
 <div class="container-fluid tintuc">
     <div class="container">
         <div class="row">
@@ -8,8 +9,9 @@
                 <h3>KẾT QUẢ THI</h3>
             </div>
         </div>
-
+        
         <div class="main_gioithieu">
+        <div class="datatable">
             <table class="table tbl">
                 <thead>
                     <tr>
@@ -34,9 +36,10 @@
                             <td>{{$kq->thoigianthi}} phút</td>
                             <td>{{$kq->diem}}</td>
                             <td>{{$kq->xeploai}}</span></td>
-                            <td><a  href="../lichsuthi/{{$kq->id_de}}"><button style="font-weigth:bold;">Chi tiết</button></a></td>
+                            <td><a  href="lichsuthi/{{$kq->id_de}}"><button style="font-weigth:bold;">Chi tiết</button></a></td>
                         </tr>
                     <?php endforeach ?>
+                    
                 </tbody>
             </table>
 

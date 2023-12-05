@@ -33,17 +33,7 @@
 								
 							</li>
 				</a>
-				<a href="{{url('giaovien/hocsinh/dshocsinh')}}">
-					<li class="bg-info export">
-					<div class="top-info">
-						<a href="{{url('giaovien/hocsinh/dshocsinh')}}"> Học sinh</a>
-						
-					</div>
-					<a href="{{url('giaovien/hocsinh/dshocsinh')}}"><i class="fas fa-user-graduate"></i></a>
-					<span class="bottom-info bg-primary">{{count($hocsinh)}}</span>
-					{{-- <div class="anhmomo7"></div> --}}
-				</li>
-			</a>
+				
 				
 				<a href="{{url('giaovien/loaicauhoi/dsloai')}}">
 				<li class="bg-warning">
@@ -54,8 +44,32 @@
 					<a href="{{url('giaovien/loaicauhoi/dsloai')}}"><i class="fab fa-buromobelexperte"></i></a>
 					<span class="bottom-info bg-primary">{{count($mucdo)}}</span>
 					{{-- <div class="anhmomo4"></div> --}}
+					</a>
+					<a href="{{url('giaovien/cauhoi/dscauhoi')}}">
+					<li class="bg-success">
+						<div class="top-info">
+							<a href="{{url('giaovien/cauhoi/dscauhoi')}}"> Câu hỏi</a>
+							
+						</div>
+						<a href="{{url('giaovien/cauhoi/dscauhoi')}}"><i class="fas fa-question"></i> </a>
+						<span class="bottom-info bg-primary">{{count($cauhoi)}}</span>
+						{{-- <div class="anhmomo2"></div> --}}
+					</li>
+				</a>
 				</li><br><br>
-			</a>
+		
+			
+			<!-- <a href="{{url('giaovien/hocsinh/dshocsinh')}}">
+					<li class="bg-info export">
+					<div class="top-info">
+						<a href="{{url('giaovien/hocsinh/dshocsinh')}}"> Học sinh</a>
+						
+					</div>
+					<a href="{{url('giaovien/hocsinh/dshocsinh')}}"><i class="fas fa-user-graduate"></i></a>
+					<span class="bottom-info bg-primary">{{count($hocsinh)}}</span>
+					{{-- <div class="anhmomo7"></div> --}}
+				</li>
+			</a> -->
 			<a href="{{url('giaovien/dethi/dsdethi')}}">
 				<li class="bg-success exam">
 					<div class="top-info">
@@ -71,7 +85,7 @@
 			<a href="{{url('giaovien/monthi/dsmonthi')}}">
 				<li class="bg-warning import">
 					<div class="top-info">
-						<a href="{{url('giaovien/monthi/dsmonthi')}}"> Môn thi</a>
+						<a href="{{url('giaovien/monthi/dsmonthi')}}">Kết quả thi</a>
 						
 					</div>
 					<a href="{{url('giaovien/monthi/dsmonthi')}}"><i class="fas fa-book"></i></a>
@@ -79,17 +93,7 @@
 					{{-- <div class="anhmomo8"></div> --}}
 				</li>
 			</a>
-			<a href="{{url('giaovien/cauhoi/dscauhoi')}}">
-					<li class="bg-success">
-						<div class="top-info">
-							<a href="{{url('giaovien/cauhoi/dscauhoi')}}"> Câu hỏi</a>
-							
-						</div>
-						<a href="{{url('giaovien/cauhoi/dscauhoi')}}"><i class="fas fa-question"></i> </a>
-						<span class="bottom-info bg-primary">{{count($cauhoi)}}</span>
-						{{-- <div class="anhmomo2"></div> --}}
-					</li>
-				</a>
+			
 				<!--<li class="bg-primary setting">
 					<div class="top-info">
 						<a href="#">Setting</a>

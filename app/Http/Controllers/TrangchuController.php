@@ -102,7 +102,7 @@ class TrangchuController extends Controller
     );
 
     //email và pass do ng dùng nhập lấy theo name input
-    $chungthuc =  array('email' => $req->email, 'password' => $req->password);
+    $chungthuc = array('email' => $req->email, 'password' => $req->password);
     if (Auth::attempt($chungthuc)) {
       if (Auth::user()->quyen == '0')
         return redirect('trangchu');
@@ -335,10 +335,10 @@ class TrangchuController extends Controller
     // ->select('dapandung.id_cauhoi','dapandung.noidung')
     // ->pluck('noidung','id_cauhoi');
 
-    $dapandung = DB::table('dapandung')
-      ->join('cauhoi', 'cauhoi.id_cauhoi', '=', 'dapandung.id_cauhoi')
+    $dapandung = DB::table('cauhoi')
+      ->select('cauhoi.id_cauhoi')
       ->join('ctdethi', 'ctdethi.id_cauhoi', '=', 'cauhoi.id_cauhoi')
-      ->where('ctdethi.id_de', '=', $id)->pluck('dapandung.noidung', 'dapandung.id_cauhoi');
+      ->where('ctdethi.id_de', '=', $id)->pluck('cauhoi.dapan', 'cauhoi.id_cauhoi');
     // dd($dapandung);
 
     $count = 0;
@@ -412,9 +412,9 @@ class TrangchuController extends Controller
     $dapandung = DB::table('dethi')
       ->join('ctdethi', 'ctdethi.id_de', '=', 'dethi.id_de')
       ->join('cauhoi', 'ctdethi.id_cauhoi', '=', 'cauhoi.id_cauhoi')
-      ->join('dapandung', 'cauhoi.id_cauhoi', '=', 'dapandung.id_cauhoi')->where('dethi.id_de', '=', $id)
-      ->select('dapandung.id_cauhoi', 'dapandung.noidung')
-      ->get()->pluck('noidung', 'id_cauhoi');
+      ->where('dethi.id_de', '=', $id)
+      ->select('dethi.id_cauhoi', 'dethi.dapan')
+      ->get()->pluck('dapan', 'id_cauhoi');
     // dd($dapandung);
 
 
@@ -452,10 +452,11 @@ class TrangchuController extends Controller
     $id_cauhoi = array();
     foreach ($ctdethi as $item) {
 
-      array_push($id_cauhoi, (int)$item->id_cauhoi);
+      array_push($id_cauhoi, (int) $item->id_cauhoi);
       // dd($id_cauhoi);
     }
-    $dapan = Db::table('dapandung')->whereIn('id_cauhoi', $id_cauhoi)->get();
+
+    $dapan = Db::table('cauhoi')->whereIn('id_cauhoi', $id_cauhoi)->get();
 
     $pdf = PDF::loadView('admin.dethi.exportPDFctdethi', compact('dethi', 'ctdethi', 'dapan'));
     $pdf->save(storage_path() . '_filename.pdf');

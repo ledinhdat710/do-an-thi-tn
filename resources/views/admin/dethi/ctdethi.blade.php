@@ -221,7 +221,7 @@
 							<div class="col-md-2"></div>
 						</div>
 						<div class="col-md-2"></div>
-						<div class="col-md-10 dapantrongch"> <b>Đáp án: </b>
+						<!-- <div class="col-md-10 dapantrongch"> <b>Đáp án: </b>
 							@foreach($dapan as $item)
 							{{-- lây ra id_cau hỏi của từng câu so sánh với tất cả các id câu hoi trong dap án --}}
 							{{-- nếu trùng id_câu hỏi thì in ra đap an --}}
@@ -229,7 +229,7 @@
 							{{$item->noidung}}
 							@endif
 							@endforeach
-						</div>
+						</div> -->
 				</div>
 
 				@endfor

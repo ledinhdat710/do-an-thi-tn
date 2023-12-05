@@ -111,7 +111,7 @@ class DethiController extends Controller
             array_push($id_cauhoi, (int)$item->id_cauhoi);
             // dd($id_cauhoi);
         }
-        $dapan = Db::table('dapandung')->whereIn('id_cauhoi', $id_cauhoi)->get();  // lấy những đáp án có id_cau hỏi  nằm trong cái mãng đó 
+        $dapan = Db::table('cauhoi')->whereIn('id_cauhoi', $id_cauhoi)->get();  // lấy những đáp án có id_cau hỏi  nằm trong cái mãng đó 
         // dd($dapan);
         return view('admin.dethi.ctdethi', ['dethi' => $dethi, 'ctdethi' => $ctdethi, 'mucdo' => $mucdo, 'dapan' => $dapan, 'mdnhanbiet' => $mdnhanbiet, 'thonghieu' => $mdthonghieu, 'mdvandung' => $mdvandung]);
     }
