@@ -336,9 +336,9 @@ class TrangchuController extends Controller
     // ->pluck('noidung','id_cauhoi');
 
     $dapandung = DB::table('cauhoi')
-      ->select('cauhoi.id_cauhoi')
+      ->select('cauhoi.id_cauhoi', 'cauhoi.dapan')
       ->join('ctdethi', 'ctdethi.id_cauhoi', '=', 'cauhoi.id_cauhoi')
-      ->where('ctdethi.id_de', '=', $id)->pluck('cauhoi.dapan', 'cauhoi.id_cauhoi');
+      ->where('ctdethi.id_de', '=', $id)->pluck('dapan', 'id_cauhoi');
     // dd($dapandung);
 
     $count = 0;
@@ -413,7 +413,7 @@ class TrangchuController extends Controller
       ->join('ctdethi', 'ctdethi.id_de', '=', 'dethi.id_de')
       ->join('cauhoi', 'ctdethi.id_cauhoi', '=', 'cauhoi.id_cauhoi')
       ->where('dethi.id_de', '=', $id)
-      ->select('dethi.id_cauhoi', 'dethi.dapan')
+      ->select('cauhoi.id_cauhoi', 'cauhoi.dapan')
       ->get()->pluck('dapan', 'id_cauhoi');
     // dd($dapandung);
 
