@@ -16,6 +16,8 @@ use App\CtDeThi;
 use App\MucDo;
 use App\KetQua;
 use App\User;
+use App\GiaoVien;
+use App\HocSinh;
 use DB;
 use Auth;
 use Hash;
@@ -86,6 +88,7 @@ class TrangchuController extends Controller
   }
   public function postdangnhap(Request $req)
   {
+    Log::info('mymessage');
     $this->validate(
       $req,
       [
@@ -115,7 +118,7 @@ class TrangchuController extends Controller
     }
   }
 
-  public function getdangky(Request $req)
+  public function getdangky()
   { //Thêm hàm get đăng ký
     return view('admin.layout.dangky');
   }
@@ -125,7 +128,7 @@ class TrangchuController extends Controller
     $this->validate(
       $request,
       [
-        'tenuser' => 'required|min:3|alpha',
+        'tenuser' => 'required',
         'email' => 'required|email|unique:users',
         'password' => 'required|min:6|max:20',
         'quyen' => 'required'
@@ -144,15 +147,58 @@ class TrangchuController extends Controller
       ]
 
     );
-    //sau khi bắt lỗi xong, lấy dlieu lưu vào trong model
     $user = new User;
     $user->name = $request->tenuser;
     $user->email = $request->email;
     $user->password = Hash::make($request->password);
     $user->quyen = $request->quyen;
     $user->save();
+    //sau khi bắt lỗi xong, lấy dlieu lưu vào trong model
+    if ($request->quyen == 0) {
+      $hocsinh = new HocSinh();
+      $hocsinh->hoten = $request->tenuser;
+      $hocsinh->id = $user->id;
+      if ($request->hasFile('hinhanh')) {
+        $file = $request->file('hinhanh');
+        $duoifile = $file->getClientOriginalExtension();
+        $name = $file->getClientOriginalName(); //lấy tên gốc hình ra
+        //đặt tên không trùng
+        $hinh = str_random(4) . "_" . $name;
+        while (file_exists("upload/avatar" . $hinh)) {
+          $hinh = str_random(4) . "_" . $name;
+        }
+        $file->move("upload/avatar", $hinh); //lưu
+        $hocsinh->hinhanh = $hinh;
+      }
+      $hocsinh->gioitinh = $request->gioitinh;
+      $hocsinh->ngaysinh = $request->ngaysinh;
+      $hocsinh->diachi = $request->diachi;
+      $hocsinh->sdt = $request->sdt;
+      $hocsinh->save();
+    } else if ($request->quyen == 1) {
+      $giaovien = new GiaoVien();
+      $giaovien->hoten = $request->tenuser;
+      $giaovien->id = $user->id;
+      if ($request->hasFile('hinhanh')) {
+        $file = $request->file('hinhanh');
+        $duoifile = $file->getClientOriginalExtension();
+        $name = $file->getClientOriginalName(); //lấy tên gốc hình ra
+        //đặt tên không trùng
+        $hinh = str_random(4) . "_" . $name;
+        while (file_exists("upload/avatar" . $hinh)) {
+          $hinh = str_random(4) . "_" . $name;
+        }
+        $file->move("upload/avatar", $hinh); //lưu
+        $giaovien->hinhanh = $hinh;
+      }
+      $giaovien->gioitinh = $request->gioitinh;
+      $giaovien->ngaysinh = $request->ngaysinh;
+      $giaovien->diachi = $request->diachi;
+      $giaovien->sdt = $request->sdt;
+      $giaovien->save();
+    }
     //dẫn về trang 
-    return redirect('admin.layout.dangnhap')->with('thongbao', 'Thêm tài khoản thành công!');
+    return view('admin.layout.dangnhap')->with('thongbao', 'Thêm tài khoản thành công!');
   }
 
   public function postdangxuat()

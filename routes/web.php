@@ -46,7 +46,7 @@ Route::post('dangnhap', 'TrangchuController@postdangnhap');
 
 // them dang ky
 Route::get('dangky', 'TrangchuController@getdangky');
-Route::post('dangky', 'TrangchuController@postdangky');
+Route::post('dangky', 'TrangchuController@postdangky')->name('dangky');
 
 Route::get('dangxuat', 'TrangchuController@postdangxuat');
 Route::get('gvdangxuat', 'TrangchuController@gvdangxuat');

@@ -217,12 +217,6 @@
 		</div>
 	</form>
 
-
-
-
-
-
-
 	<script language="javascript">
 		var m = "{{$dethi->thoigianthi}}";
 

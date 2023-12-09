@@ -17,8 +17,9 @@
 		<div class="alert alert-{{Session::get('flag')}}">{{Session::get('message')}} </div>
 		@endif
 	</div>
-	
-	<form action="dangky" method="post" enctype="multipart/form-data">
+
+	<form action="{{route('dangky')}}" method="post" enctype="multipart/form-data">
+		<input type="hidden" name="_token" value="{{csrf_token()}}">
 		<div class="form-area">
 			<div class="img-area">
 				<img src="imgs/login-icon.png" alt="">
@@ -49,7 +50,7 @@
 			</tr>
 			<tr class="tbl">
 				<p required=""> &nbsp; &nbsp;Hình ảnh</p>
-				<td><input type="file" class="from-control " name="hinhanh" />
+				<td><input type="file" required="" class="from-control " name="hinhanh" />
 
 				</td>
 			</tr>
@@ -64,15 +65,21 @@
 				<p></p>
 			</tr>
 			<tr class="tbl">
+				<p> &nbsp; &nbsp;Ngày sinh</p>
+				<td><input type="text" required="" class="from-control nhaploai" placeholder="  Nhập ngày sinh" name="ngaysinh" />
+
+				</td>
+			</tr>
+			<tr class="tbl">
 				<p> &nbsp; &nbsp;Địa chỉ</p>
-				<td><input type="text"required="" class="from-control nhaploai" placeholder="  Nhập địa chỉ" name="tenloai" />
+				<td><input type="text" class="from-control nhaploai" placeholder="  Nhập địa chỉ" name="diachi" />
 
 				</td>
 			</tr>
 
 			<tr class="tbl">
 				<p> &nbsp; &nbsp;Số điện thoại</p>
-				<td><input type="text" required=""class="from-control nhaploai" placeholder="  Nhập số điện thoại" name="tenloai" />
+				<td><input type="text" class="from-control nhaploai" placeholder="  Nhập số điện thoại" name="sdt" />
 
 				</td>
 			</tr>
