@@ -462,4 +462,8 @@ class TrangchuController extends Controller
     $pdf->save(storage_path() . '_filename.pdf');
     return $pdf->download('dethi.pdf');
   }
+
 }
+
+
+
