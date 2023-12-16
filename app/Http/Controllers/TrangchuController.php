@@ -30,28 +30,32 @@ class TrangchuController extends Controller
     $dethi = DB::table('dethi')->orderBy('id_de', 'DESC')
       ->join('monthi', 'monthi.id_mh', '=', 'dethi.id_mh')
       ->join('kythi', 'kythi.id_ky', '=', 'dethi.id_ky')
-      ->select('monthi.tenmh', 'monthi.hinhanh', 'kythi.tenky', 'socau', 'thoigianthi', 'tendethi', 'id_de')
+      ->join('khoi', 'khoi.id_khoi', '=', 'dethi.id_khoi')
+      ->select('monthi.tenmh', 'monthi.hinhanh', 'kythi.tenky','khoi.tenkhoi', 'socau', 'thoigianthi', 'tendethi', 'id_de')
       ->where('kythi.id_ky', '=', '4')
       ->where('trangthai', 'like', '%' . 'Thi thử' . '%')->paginate(8);
 
     $dethi2 = DB::table('dethi')->orderBy('id_de', 'DESC')
       ->join('monthi', 'monthi.id_mh', '=', 'dethi.id_mh')
       ->join('kythi', 'kythi.id_ky', '=', 'dethi.id_ky')
-      ->select('monthi.tenmh', 'monthi.hinhanh', 'kythi.tenky', 'socau', 'thoigianthi', 'tendethi', 'id_de')
+      ->join('khoi', 'khoi.id_khoi', '=', 'dethi.id_khoi')
+      ->select('monthi.tenmh', 'monthi.hinhanh', 'kythi.tenky','khoi.tenkhoi', 'socau', 'thoigianthi', 'tendethi', 'id_de')
       ->where('kythi.id_ky', '=', '5')
       ->where('trangthai', 'like', '%' . 'Thi thử' . '%')->paginate(8);
 
     $dethi3 = DB::table('dethi')->orderBy('id_de', 'DESC')
       ->join('monthi', 'monthi.id_mh', '=', 'dethi.id_mh')
       ->join('kythi', 'kythi.id_ky', '=', 'dethi.id_ky')
-      ->select('monthi.tenmh', 'monthi.hinhanh', 'kythi.tenky', 'socau', 'thoigianthi', 'tendethi', 'id_de')
+      ->join('khoi', 'khoi.id_khoi', '=', 'dethi.id_khoi')
+      ->select('monthi.tenmh', 'monthi.hinhanh', 'kythi.tenky','khoi.tenkhoi', 'socau', 'thoigianthi', 'tendethi', 'id_de')
       ->where('kythi.id_ky', '=', '2')
       ->where('trangthai', 'like', '%' . 'Thi thử' . '%')->paginate(8);
 
     $dethi4 = DB::table('dethi')->orderBy('id_de', 'DESC')
       ->join('monthi', 'monthi.id_mh', '=', 'dethi.id_mh')
       ->join('kythi', 'kythi.id_ky', '=', 'dethi.id_ky')
-      ->select('monthi.tenmh', 'monthi.hinhanh', 'kythi.tenky', 'socau', 'thoigianthi', 'tendethi', 'id_de')
+      ->join('khoi', 'khoi.id_khoi', '=', 'dethi.id_khoi')
+      ->select('monthi.tenmh', 'monthi.hinhanh', 'kythi.tenky','khoi.tenkhoi', 'socau', 'thoigianthi', 'tendethi', 'id_de')
       ->where('kythi.id_ky', '=', '1')
       ->where('trangthai', 'like', '%' . 'Thi thử' . '%')->paginate(8);
 
@@ -321,6 +325,7 @@ class TrangchuController extends Controller
       ->join('monthi', 'monthi.id_mh', '=', 'dethi.id_mh')
       ->join('khoi', 'khoi.id_khoi', '=', 'dethi.id_khoi')
       ->join('kythi', 'kythi.id_ky', '=', 'dethi.id_ky')
+      
       ->select('monthi.tenmh', 'monthi.hinhanh', 'kythi.tenky', 'socau', 'dethi.id_de', 'thoigianthi', 'id_de', 'khoi.tenkhoi')
       ->where('id_de', '=', $request->id_dethi)
       ->get()->toArray();
