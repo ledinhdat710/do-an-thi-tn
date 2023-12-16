@@ -185,7 +185,7 @@
 					<div class="col-md-1"></div>
 					<div class="col-md-4 coso">
 						<h4 class="">SỞ GIÁO DỤC VÀ ĐÀO TẠO</h4>
-						
+
 						<!-- <h5 class="dechinhthuc">TRƯỜNG THPT NAM KHOÁI CHÂU</h5> -->
 						<p class="under_gach"></p>
 
@@ -209,12 +209,13 @@
 
 						<tr>
 							<th>STT</th>
-							<th>Họ tên</th>
-							<td>Ngày sinh</td>
-							<th>Kỳ thi</th>
-							<th>Tên đề thi</th>
+							<th>Đề thi</th>
+							<th>Họ và tên</th>
+							<th>Mã học sinh</th>
+							<th>Ngày sinh</th>
 							<th>Điểm</th>
 							<th>Xếp loại</th>
+							<th>Ngày thi</th>
 
 						</tr>
 
@@ -224,13 +225,13 @@
 						foreach ($ketqua as $kq) : $stt ?>
 							<tr>
 								<td>{{ $stt++ }}</td>
+								<td>{{$kq->tendethi}}</td>
 								<td>{{$kq->hoten}}</td>
+								<td>{{$kq->id_hs}}</td>
 								<td>{{$kq->ngaysinh}}</td>
-								<td>{{$kq->tenky}}</td>
-								<td>{{$kq->tenmh}}</td>
 								<td>{{$kq->diem}}</td>
 								<td>{{$kq->xeploai}}</td>
-
+								<td>{{$kq->created_at}}</td>
 							</tr>
 						<?php endforeach ?>
 

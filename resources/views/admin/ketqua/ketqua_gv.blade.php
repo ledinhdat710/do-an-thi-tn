@@ -23,6 +23,36 @@
 		<h6 class="panel-title"><i class="fas fa-chalkboard-teacher"></i>QUẢN LÝ KẾT QUẢ THI</h6>
 	</div>
 	<div class="datatable">
+		<form style="margin-top:7px;" method="get" id="searchform" action="searchketqua">
+			<div class="email-box row" style="margin-left:7px">
+				<div class="col-md-3">
+					<label>Tên đề thi</label>
+					<input class="from-control nhaploai-search" type="search" placeholder="Nhập tên đề thi" name="key" />
+				</div>
+				<div class="col-md-6">
+					<label>Ngày thi (từ ngày - đến ngày)</label>
+					<div style="justify-content:space-between">
+						<input class="from-control nhaploai-search" style="margin-right:5px" type="date" placeholder="Nhập tên giáo viên" name="tungay" />
+						<input class="from-control nhaploai-search" type="date" placeholder="Nhập tên giáo viên" name="denngay" />
+					</div>
+				</div>
+				<div class="col-md-2">
+					<label>Xếp loại</label>
+					<select class="from-control nhaploai-search" name="xeploai" style="margin-right:5px">
+
+						<option value="Tất cả">Tất cả</option>
+						<option value="Yếu">Yếu</option>
+						<option value="Trung bình">Trung bình</option>
+						<option value="TB khá">TB khá</option>
+						<option value="Khá">Khá</option>
+						<option value="Giỏi">Giỏi</option>
+					</select>
+				</div>
+				<div class="col-md-12" style="text-align:center; margin-top:15px">
+					<button type="submit" style="background: #213351" class="btn btn-primary">Tìm kiếm</button>
+				</div>
+			</div>
+		</form>
 		@if(session('thongbao'))
 		<div class="alert alert-success">
 			<span class="glyphicon glyphicon-ok icon-oke"></span> {{session('thongbao')}}
@@ -32,14 +62,13 @@
 			<thead>
 				<tr>
 					<th>STT</th>
-					<th>Mã SV</th>
+					<th>Đề thi</th>
 					<th>Họ và tên</th>
-					<th>Giới tính</th>
+					<th>Mã học sinh</th>
 					<th>Ngày sinh</th>
-					<th>Địa chỉ</th>
 					<th>Điểm</th>
 					<th>Xếp loại</th>
-
+					<th>Ngày thi</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -48,17 +77,13 @@
 				foreach ($ketqua as $kq) : $stt ?>
 					<tr>
 						<td>{{ $stt++ }}</td>
-						<td>{{$kq->id_hs}}</td>
+						<td>{{$kq->tendethi}}</td>
 						<td>{{$kq->hoten}}</td>
-						<td>{{$kq->gioitinh}}</td>
+						<td>{{$kq->id_hs}}</td>
 						<td>{{$kq->ngaysinh}}</td>
-						<td>{{$kq->diachi}}</td>
-						{{-- <td >{{$gv->id_mh}}</td> --}}
-						{{-- <td >{{$kq->id_de}}</td>
-						<td>{{$kq->socaudung}}</td> --}}
 						<td>{{$kq->diem}}</td>
-						<td>{{$kq->xeploai}}</span></td>
-
+						<td>{{$kq->xeploai}}</td>
+						<td>{{$kq->created_at}}</td>
 					</tr>
 				<?php endforeach ?>
 			</tbody>
@@ -66,6 +91,16 @@
 	</div>
 </div>
 <style>
+	.dataTables_filter {
+		display: none !important;
+	}
+	.nhaploai-search {
+		border-radius: 5px;
+		border: 1px solid rgb(177, 175, 175);
+		height: 38px;
+		width: 200px;
+	}
+
 	.menunguoidung {
 		background: #4F588C;
 		color: #000;

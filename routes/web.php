@@ -277,6 +277,7 @@ Route::group(['prefix' => 'giaovien'], function () {
 
 	Route::group(['prefix' => 'ketqua'], function () {
 		Route::get('dsketqua', 'KetQuaController@ketquathi_gv');
+		Route::get('searchketqua', 'KetQuaController@searchketqua');
 		Route::get('exportKetQua', 'ExcelController@exportKetQua');
 		Route::get('exportPDF', 'KetQuaController@exportPDF');
 	});
