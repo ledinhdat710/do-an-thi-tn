@@ -44,9 +44,7 @@
 
 
 
-					<h4>	<b>Liên Hệ</b></h4>
-
-					<p style="margin-bottom: 40px;">Báo chí liên hệ: <b style="color: red">ngocthaohehe@gmail.com</b></p>	
+					
 
 				</div>
 

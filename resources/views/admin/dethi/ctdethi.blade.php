@@ -127,8 +127,8 @@
 
 
 	<a href="../../pdf/{{$dethi->id_de}}"> <button type="button" style="background: #213351" class="btn btn-primary">Export PDF</button></a>
-	<a href="export"><button type="button" disabled="" class="btn btnthem">Export</button></a>
-	<a href="import"> <button type="button" disabled="" class="btn btnthem">Import</button></a>
+	<!-- <a href="export"><button type="button" disabled="" class="btn btnthem">Export</button></a>
+	<a href="import"> <button type="button" disabled="" class="btn btnthem">Import</button></a> -->
 
 
 </div>

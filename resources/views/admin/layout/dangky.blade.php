@@ -39,7 +39,12 @@
 				<span class="glyphicon glyphicon-ok icon-oke"></span> {{session('thongbao')}}
 			</div>
 			@endif
+			<tr class="tbl">
+				<p> &nbsp; &nbsp;Email đăng nhập</p>
+				<td><input type="email" required="" class="from-control nhaploai" placeholder="  Nhập email" name="email" />
 
+				</td>
+			</tr>
 			<tr class="tbl">
 
 
@@ -66,7 +71,7 @@
 			</tr>
 			<tr class="tbl">
 				<p> &nbsp; &nbsp;Ngày sinh</p>
-				<td><input type="text" required="" class="from-control nhaploai" placeholder="  Nhập ngày sinh" name="ngaysinh" />
+				<td><input type="date" required="" class="from-control nhaploai" placeholder="  Nhập ngày sinh" name="ngaysinh" />
 
 				</td>
 			</tr>
@@ -83,12 +88,7 @@
 
 				</td>
 			</tr>
-			<tr class="tbl">
-				<p> &nbsp; &nbsp;Email</p>
-				<td><input type="email" required="" class="from-control nhaploai" placeholder="  Nhập email" name="email" />
-
-				</td>
-			</tr>
+			
 
 			<tr class="tbl">
 				<p> &nbsp; &nbsp;Mật Khẩu</p>

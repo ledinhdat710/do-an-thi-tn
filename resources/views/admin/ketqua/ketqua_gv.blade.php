@@ -13,7 +13,7 @@
 		@endforeach
 
 	</div>
-	<a href="../ketqua/exportKetQua"> <button type="button" style="background: #213351" class="btn btn-primary">Export Excel</button></a>
+	<!-- <a href="../ketqua/exportKetQua"> <button type="button" style="background: #213351" class="btn btn-primary">Export Excel</button></a> -->
 	<a href="../ketqua/exportPDF"><button style="background: #213351" class="btn btn-primary">Export PDF</button></a>
 
 </div>

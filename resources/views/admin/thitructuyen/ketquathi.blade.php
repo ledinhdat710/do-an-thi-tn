@@ -15,8 +15,8 @@
 		}
 
 		body {
-			/*background-color: #6cf;*/
-			/* background-image: url(../imgs/gbfooter.jpg); */
+			background-color: #6cf;
+			background-image: url(../imgs/gbfooter.jpg);
 			font-family: Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
 		}
 
@@ -328,13 +328,14 @@
 
 		</div>
 
-	</div>
-	<a href="{{url('trangchu') }}">
+	</div style="color:#000;">
+	<div><a href="{{url('trangchu') }}">
 		<div class="login"> Về trang chủ</div>
-	</a>
-	<a href="../lichsuthi/{{$ct->id_de}}">
+	</a></div>
+	<p></p>
+	<div><a href="../lichsuthi/{{$ct->id_de}}">
 		<div class="login"> Chi tiết đáp án</div>
-	</a>
+	</a></div>
 	@endforeach
 	<!-- <p class="direction"><img src="../imgs/banner/direction.png" alt="" width="508" height="630"></p>
 	<p class="muctieu1">You can do it!</p>
