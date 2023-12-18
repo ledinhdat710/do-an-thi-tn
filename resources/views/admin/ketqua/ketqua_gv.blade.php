@@ -45,7 +45,7 @@
         </div>
         <div class="col-md-2">
             <label>Xếp loại</label>
-            <select class="from-control nhaploai-search" name="xeploai" style="margin-right:5px" value="{{ session()->get('key') }} ">
+            <select class="from-control nhaploai-search" name="xeploai" style="margin-right:5px"  placeholder="{{ session()->get('xeploai') }} ">
                 <option value="Tất cả">Tất cả</option>
                 <option value="Yếu">Yếu</option>
                 <option value="Trung bình">Trung bình</option>
