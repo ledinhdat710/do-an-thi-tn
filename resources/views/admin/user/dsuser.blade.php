@@ -27,7 +27,7 @@
 											<th>STT</th>
 											<th>Tên người dùng</th>
 											<th>Email</th>
-											<th>Quyền</th>
+											<th>Đối tượng</th>
 											<th>Sửa</th>
 				                            <th>Xóa</th>
 				                        </tr>
@@ -41,11 +41,11 @@
 											<td id="name" name="name">{{$us->name}}</td>
 											<td id="name" name="email">{{$us->email}}</td>
 											<td id="name" name="email">
-												@if($us->quyen == '0')
+												@if($us->doituong == '0')
 												<p>Học sinh</p>
-												@elseif($us->quyen == '1')
+												@elseif($us->doituong == '1')
 												<p>Giáo viên</p>
-												@elseif($us->quyen == '2')
+												@elseif($us->doituong == '2')
 												<p>Admin</p>
 												@endif 
 											</td>

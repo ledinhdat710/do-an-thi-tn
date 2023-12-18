@@ -70,7 +70,11 @@ class TrangchuController extends Controller
     //  ->get()->toArray();
     return view('admin.layout.trangchu', ['dethi' => $dethi, 'dethi2' => $dethi2, 'dethi3' => $dethi3, 'dethi4' => $dethi4]);
   }
-
+// public function avatar()
+// {
+// $hs=DS::table('hocsinh');
+// return view('admin.layout.trangchu',['hocsinh'->$hocsinh])  ;
+// }
 
   public function getSearch(Request $req)
   {
@@ -111,11 +115,11 @@ class TrangchuController extends Controller
     //email và pass do ng dùng nhập lấy theo name input
     $chungthuc = array('email' => $req->email, 'password' => $req->password);
     if (Auth::attempt($chungthuc)) {
-      if (Auth::user()->quyen == '0')
+      if (Auth::user()->doituong == '0')
         return redirect('trangchu');
-      if (Auth::user()->quyen == '1')
+      if (Auth::user()->doituong == '1')
         return redirect('giaovien/dash/dashbroad_gv');
-      if (Auth::user()->quyen == '2')
+      if (Auth::user()->doituong == '2')
         return redirect('dashbroad_ad');
     } else {
       return redirect()->back()->with(['flag' => 'danger', 'message', 'Đăng nhập không thành công']);
@@ -135,7 +139,7 @@ class TrangchuController extends Controller
         'tenuser' => 'required',
         'email' => 'required|email|unique:users',
         'password' => 'required|min:6|max:20',
-        'quyen' => 'required'
+        'doituong' => 'required'
       ],
       [
         'tenuser.required' => 'Bạn chưa nhập tên người dùng',
@@ -155,10 +159,10 @@ class TrangchuController extends Controller
     $user->name = $request->tenuser;
     $user->email = $request->email;
     $user->password = Hash::make($request->password);
-    $user->quyen = $request->quyen;
+    $user->doituong = $request->doituong;
     $user->save();
     //sau khi bắt lỗi xong, lấy dlieu lưu vào trong model
-    if ($request->quyen == 0) {
+    if ($request->doituong == 0) {
       $hocsinh = new HocSinh();
       $hocsinh->hoten = $request->tenuser;
       $hocsinh->id = $user->id;
@@ -179,7 +183,7 @@ class TrangchuController extends Controller
       $hocsinh->diachi = $request->diachi;
       $hocsinh->sdt = $request->sdt;
       $hocsinh->save();
-    } else if ($request->quyen == 1) {
+    } else if ($request->doituong == 1) {
       $giaovien = new GiaoVien();
       $giaovien->hoten = $request->tenuser;
       $giaovien->id = $user->id;
@@ -224,7 +228,9 @@ class TrangchuController extends Controller
     $dethi = DB::table('dethi')
       ->join('monthi', 'monthi.id_mh', '=', 'dethi.id_mh')
       ->join('kythi', 'kythi.id_ky', '=', 'dethi.id_ky')
-      ->select('dethi.tendethi', 'monthi.tenmh', 'monthi.hinhanh', 'kythi.tenky', 'socau', 'thoigianthi', 'id_de')
+      ->join('khoi', 'khoi.id_khoi', '=', 'dethi.id_khoi')
+      ->select('monthi.tenmh', 'monthi.hinhanh', 'kythi.tenky','khoi.tenkhoi', 'socau', 'thoigianthi', 'tendethi', 'id_de')
+     
       ->where('kythi.id_ky', '=', '4')
       ->where('trangthai', 'like', '%' . 'Thi thử' . '%')
 

@@ -246,7 +246,7 @@ Mirrored from demo.interface.club/londinium/index.html by HTTrack Website Copier
 			<li class="user dropdown">
 				<a class="dropdown-toggle" data-toggle="dropdown">
 					<img src="imgs/demo/users/face1.png" alt="">
-					<span>@if(Auth::check() && Auth::user()->quyen == 2)
+					<span>@if(Auth::check() && Auth::user()->doituong == 2)
 							{{Auth::user()->name}}
 						  @else
 						  <a href="{{url('dangnhap')}}"><div class="login "><i class="fas fa-user"></i> Login</div></a>
@@ -259,7 +259,7 @@ Mirrored from demo.interface.club/londinium/index.html by HTTrack Website Copier
 					<li><a href="#"><i class="icon-bubble4"></i> Messages</a></li>
 					<li><a href="#"><i class="icon-cog"></i> Settings</a></li>
 					<li>
-						@if(Auth::check() && Auth::user()->quyen == 2)
+						@if(Auth::check() && Auth::user()->doituong == 2)
 								<a href="{{url('gvdangxuat')}}"><i class="icon-exit"></i> Logout</a>
 							@else
 						
@@ -290,7 +290,7 @@ Mirrored from demo.interface.club/londinium/index.html by HTTrack Website Copier
 							<span>@if(Auth::check())
 							{{Auth::user()->name}}</span>
 							<span>
-								@if(Auth::user()->quyen == 2)
+								@if(Auth::user()->doituong == 2)
 									Admin
 								@endif
 							</span>

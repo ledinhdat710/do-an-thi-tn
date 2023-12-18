@@ -54,9 +54,9 @@
 			</tr>
 
 			<tr class="tbl">
-				<td class="style_row"><i class="fa fa-edit"></i> &nbsp; &nbsp;Quyền</td>
+				<td class="style_row"><i class="fa fa-edit"></i> &nbsp; &nbsp;Đối tượng</td>
 				<td>
-					<select name="quyen" id="tenloaich" class="form-control nhaploai">
+					<select name="doituong" id="tenloaich" class="form-control nhaploai">
 
 						<option value="0"> Học sinh</option>
 						<option value="1"> Giáo viên</option>

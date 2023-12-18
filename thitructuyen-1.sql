@@ -756,7 +756,7 @@ CREATE TABLE `users` (
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `quyen` int(3) NOT NULL,
+  `doituong` int(3) NOT NULL,
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -766,7 +766,7 @@ CREATE TABLE `users` (
 -- Đang đổ dữ liệu cho bảng `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `quyen`, `remember_token`, `created_at`, `updated_at`) VALUES
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `doituong`, `remember_token`, `created_at`, `updated_at`) VALUES
 (2, 'Lê Thị Ngọc Thảo', 'lethingocthaohy@gmail.com', NULL, '$2y$10$p/hAjfvvHabMXR1wG6X7Uu1fsTTBIaiRLrIX2z4RPYnxLcyEeFWrq', 0, NULL, NULL, NULL),
 (3, 'Vũ Xuân Thắng', 'vuxuanthang@gmail.com', NULL, '$2y$10$IwOW0k8y/O4eX2tu.UDP3.xQkVoPy4OT0ZLpjStkRwGtrcQOmykjG', 1, NULL, NULL, NULL),
 (4, 'Nguyễn Văn Tú', 'admin@gmail.com', NULL, '$2y$10$/Kb/vawvR5wKy0AkgBSzOO6YO4IHRt7MbOQ.jJ2FSNW4PqMeuxIja', 2, NULL, NULL, NULL),

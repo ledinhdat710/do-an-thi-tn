@@ -22,6 +22,7 @@
             <span class="glyphicon glyphicon-ok icon-oke"></span> {{session('thongbao')}}
         </div>
         @endif
+        
         <table class="table tbl">
             <thead>
                 <tr>

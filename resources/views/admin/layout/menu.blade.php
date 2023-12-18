@@ -13,15 +13,15 @@
 			<p class="add"><i class="fas fa-phone"></i> CONTACT</p>
 			<p class="diachi">0967978353</p>
 		</div>
-		@if(Auth::check() && Auth::user()->quyen==0)
+		@if(Auth::check() && Auth::user()->doituong==0)
 		<div class="col-md-4"></div>
 		@else
 
 		<div class="col-md-2"></div>
 		@endif
 		<div class="col-md-2 infor_user">
-			@if(Auth::check() && Auth::user()->quyen==0)
-			<img src="{{asset('imgs/demo/users/may-man.jpg') }}" alt="" width="35" height="35">
+			@if(Auth::check() && Auth::user()->doituong==0)
+			<img src="imgs/user/face25.png" alt="" width="35" height="35">
 			{{Auth::user()->name}} <i class="fas fa-sort-down checklichsu"></i>
 			@endif
 			<div class="menunguoidung">
@@ -29,9 +29,9 @@
 
 			</div>
 		</div>
-		@if(Auth::check() && Auth::user()->quyen==0)
+		@if(Auth::check() && Auth::user()->doituong==0)
 		<div class="col-md-2">
-			@if(Auth::check() && Auth::user()->quyen==0)
+			@if(Auth::check() && Auth::user()->doituong==0)
 			<a href="{{url('dangxuat')}}">
 				<div class="login" style="width: 120px;"><i class="fas fa-sign-out-alt"></i> Đăng xuất</div>
 			</a>
@@ -46,7 +46,7 @@
 		@else
 		<div class="col-md-4" style="display:flex; justify-content: center">
 			<div style="margin-right:20px">
-				@if(Auth::check() && Auth::user()->quyen==0)
+				@if(Auth::check() && Auth::user()->doituong==0)
 				<a href="{{url('dangxuat')}}">
 					<div class="login" style="width: 120px;"><i class="fas fa-sign-out-alt"></i> Đăng xuất</div>
 				</a>
@@ -59,7 +59,7 @@
 				@endif
 			</div>
 			<div>
-				@if(Auth::check() && Auth::user()->quyen==0)
+				@if(Auth::check() && Auth::user()->doituong==0)
 				<!-- <a href="{{url('dangky')}}">
 				<div class="login" style="width: 120px;"><i class="fas fa-sign-out-alt"></i> Đăng xuất</div>
 			</a> -->
@@ -112,7 +112,7 @@
 					</div>
 				</li>
 
-				@if(Auth::check() && Auth::user()->quyen==0)
+				@if(Auth::check() && Auth::user()->doituong==0)
 				<li><a href="{{url('ketquathi')}}">KẾT QUẢ THI</a></li>
 				@endif
 

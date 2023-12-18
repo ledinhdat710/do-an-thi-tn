@@ -54,18 +54,18 @@
 						<tr class="tbl">
 							<td class="style_row"><i class="fa fa-edit"></i> &nbsp; &nbsp;Quyền</td>
 							<td>
-								<select name="quyen" id="tenloaich" class="form-control nhaploai">
+								<select name="doituong" id="tenloaich" class="form-control nhaploai">
 									
-											@if($user->quyen == '0')
-												<option selected="true" value="$user->quyen">Học sinh</option>
+											@if($user->doituong == '0')
+												<option selected="true" value="$user->doituong">Học sinh</option>
 												<option  value="1" >Giáo viên</option>
 												<option  value="2" >Admin</option>
-											@elseif($user->quyen == '1')
-											<option selected="true" value="$user->quyen">Giáo viên</option>
+											@elseif($user->doituong == '1')
+											<option selected="true" value="$user->doituong">Giáo viên</option>
 												<option  value="0" >Học sinh</option>
 												<option  value="2" >Admin</option>
-												@elseif($user->quyen == '2')
-											<option selected="true" value="$user->quyen">Admin</option>
+												@elseif($user->doituong == '2')
+											<option selected="true" value="$user->doituong">Admin</option>
 												<option  value="0" >Học sinh</option>
 												<option  value="1" >Giáo viên</option>
 											@endif 

@@ -183,27 +183,30 @@
 			<div class="row head">
 				<div class="row">
 					<div class="col-md-1"></div>
-					<div class="col-md-4 coso">
-						<h4 class="">SỞ GIÁO DỤC VÀ ĐÀO TẠO</h4>
+					<div class="col-md-4 coso" >
+						<h4 class="">HỆ THỐNG QUẢN LÝ THI TRẮC NGHIỆM</h4>
 
-						<!-- <h5 class="dechinhthuc">TRƯỜNG THPT NAM KHOÁI CHÂU</h5> -->
+						<h5 class="dechinhthuc">EDUQUIZZ</h5>
 						<p class="under_gach"></p>
 
 					</div>
-					<div class="col-md-6 coso2">
+					<!-- <div class="col-md-6 coso2">
 						<h4 class="tenkythi">CỘNG HÒA XÃ HỘ CHỦ NGHĨA VIỆT NAM</h4>
 						<h5 class="dechinhthuc2">Độc lập - Tự do - Hạnh Phúc</h5>
-						<p class="under_gach2"></p>
-						<i>Ngày: {{date("d")}} tháng {{date("m")}} năm {{date("Y")}}</i>
+						<p class="under_gach2"></p> -->
+						<!-- <i>Ngày: {{date("d")}} tháng {{date("m")}} năm {{date("Y")}}</i> -->
 
 					</div>
 					<div class="col-md-2"></div>
 				</div>
 				<div class="row bangdiem">
 					<div class="col-md-4"></div>
-					<div class="col-md-4">BẢNG ĐIỂM VÀ XẾP LOẠI</div>
+					<div class="col-md-4">BÁO CÁO KẾT QUẢ THI</div>
+				
 					<div class="col-md-4"></div>
 				</div>
+				<div><i>Ngày lập: {{date("d")}} tháng {{date("m")}} năm {{date("Y")}}</i></div>
+				<div><i>Người lập: {{Auth::user()->name}}</i></div>
 				<div>
 					<table>
 

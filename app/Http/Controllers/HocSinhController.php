@@ -63,7 +63,7 @@ class HocSinhController extends Controller
         $user->name = $request->tenuser;
         $user->email = $request->email;
         $user->password = hash::make($request->password);
-        $user->quyen = $request->quyen;
+        $user->doituong = $request->doituong;
         $user->save();
         //dẫn về trang 
         return redirect()->back()->with('thongbao', 'Thêm thành công!');

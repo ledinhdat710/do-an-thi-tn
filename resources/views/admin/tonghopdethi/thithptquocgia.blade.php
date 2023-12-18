@@ -18,7 +18,7 @@
 							<div class="col-md-3 dethi ">
 								<img src="imgs/monhoc/{{ $dt->hinhanh}}" width="199" height="150" alt="">
 								<p class="tenmon">{{ $dt->tendethi}}</p>
-								<p class="title">Đề thi {{ $dt->tenmh}} gồm {{ $dt->socau}} câu, thời gian thi
+								<p class="title">Đề thi {{ $dt->tenmh}}  {{ $dt->tenkhoi}} gồm {{ $dt->socau}} câu, thời gian thi
 									{{ $dt->thoigianthi}} phút
 								</p>
 								<p class="danhgia">

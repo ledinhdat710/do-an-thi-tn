@@ -99,6 +99,7 @@ Route::get('thihocki', 'TrangchuController@getthihocky');
 Route::get('thi45p', 'TrangchuController@getthi45p');
 Route::get('thi15p', 'TrangchuController@getthi15p');
 
+
 // Route::get('trangchu','MenuController@getmenu');
 
 //nhóm các route có chung tiền tố

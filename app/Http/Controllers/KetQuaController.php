@@ -78,16 +78,36 @@ class KetQuaController extends Controller
 	{
 		$kythi = KyThi::all();
 		$monthi = MonThi::all();
-		// dd($kythi);
-		$ketqua = DB::table('ketqua')
+		session()->put('key', $req->key);
+		session()->put('xeploai', $req->xeploai);
+		if ($req->xeploai !='Tất cả')
+		{
+			$ketqua = DB::table('ketqua')
 			->join('hocsinh', 'hocsinh.id_hs', 'ketqua.id_hs')
 			->join('dethi', 'dethi.id_de', 'ketqua.id_de', 'dethi.tendethi')
 			->join('monthi', 'monthi.id_mh', 'dethi.id_mh')
 			->join('kythi', 'kythi.id_ky', 'dethi.id_ky')
-			->where('dethi.tendethi', 'like', '%' . $req->key . '%')->get()->toArray();
+			->where('dethi.tendethi', 'like', '%' . $req->key . '%')
+			->where('ketqua.xeploai', '=',  $req->xeploai)
+			// ->where('ketqua.created_at', '>=',  $req->tungay)
+			// ->where('ketqua.created_at', '<=',  $req->denngay)
+			->get()->toArray();}
+		else
+		{
+			$ketqua = DB::table('ketqua')
+			->join('hocsinh', 'hocsinh.id_hs', 'ketqua.id_hs')
+			->join('dethi', 'dethi.id_de', 'ketqua.id_de', 'dethi.tendethi')
+			->join('monthi', 'monthi.id_mh', 'dethi.id_mh')
+			->join('kythi', 'kythi.id_ky', 'dethi.id_ky')
+			->where('dethi.tendethi', 'like', '%' . $req->key . '%')
+			// ->wheredate('ketqua.created_at', '>=',  $req->tungay)
+			// ->where('ketqua.created_at', '<=',  $req->denngay)
+			->get()->toArray();}
 
 		return view('admin.ketqua.ketqua_gv', ['ketqua' => $ketqua, 'kythi' => $kythi, 'monthi' => $monthi]);
 	}
+	
+	
 
 	public function exportPDF()
 	{
@@ -123,12 +143,16 @@ class KetQuaController extends Controller
 	public function ketquathihs()
 	{
 		$id = Auth::id();
+		
 		echo ($id);
 		$ketqua = DB::table('ketqua')
 			->join('hocsinh', 'hocsinh.id_hs', 'ketqua.id_hs', 'hocsinh.id')
 			->join('dethi', 'dethi.id_de', 'ketqua.id_de')
 			->join('monthi', 'monthi.id_mh', 'dethi.id_mh')
-			->join('kythi', 'kythi.id_ky', 'dethi.id_ky')->where('ketqua.id_hs', '=', $id)->get()->toArray();
+			->join('kythi', 'kythi.id_ky', 'dethi.id_ky')->where('ketqua.id_hs', '=', $id)
+			// ->get()->toArray();
+			->paginate(10);
+			
 		$diem = DB::table('ketqua')->pluck('diem');
 		$xeploai = '';
 		if ($diem[0] < 5) {
@@ -143,5 +167,6 @@ class KetQuaController extends Controller
 			$xeploai = 'Giỏi';
 		}
 		return view('admin.layout.ketquathi', ['ketqua' => $ketqua, 'xeploai' => $xeploai]);
+	
 	}
 }

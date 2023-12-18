@@ -106,7 +106,7 @@
 			<tr class="tbl">
 				<p> &nbsp; &nbsp;Đối tượng</p>
 				<td>
-					<select name="quyen" id="tenloaich" class="form-control nhaploai">
+					<select name="doituong" id="tenloaich" class="form-control nhaploai">
 						<option value="0"> Học sinh</option>
 						<option value="1"> Giáo viên</option>
 					</select>

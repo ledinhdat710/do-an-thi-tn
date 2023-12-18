@@ -39,7 +39,7 @@ class UserController extends Controller
                 'tenuser' => 'required|min:3|alpha',
                 'email' => 'required|email|unique:users',
                 'password' => 'required|min:6|max:20',
-                'quyen' => 'required'
+                'doituong' => 'required'
             ],
             [
                 'tenuser.required' => 'Bạn chưa nhập tên người dùng',
@@ -60,7 +60,7 @@ class UserController extends Controller
         $user->name = $request->tenuser;
         $user->email = $request->email;
         $user->password = Hash::make($request->password);
-        $user->quyen = $request->quyen;
+        $user->doituong = $request->doituong;
         $user->save();
         //dẫn về trang 
         return redirect('admin/user/dsuser')->with('thongbao', 'Thêm thành công!');
@@ -80,7 +80,7 @@ class UserController extends Controller
             [
                 'tenuser' => 'required|min:3',
                 'password' => 'required|min:6|max:20',
-                'quyen' => 'required'
+                'doituong' => 'required'
             ],
             [
                 'tenuser.required' => 'Bạn chưa nhập tên người dùng',
@@ -97,7 +97,7 @@ class UserController extends Controller
         $user->name = $request->tenuser;
         // $user->email = $request->email;
         $user->password = Hash::make($request->password);
-        $user->quyen = $request->quyen;
+        $user->doituong = $request->doituong;
         $user->save();
         //dẫn về trang 
         return redirect('admin/user/dsuser')->with('thongbao', 'Sửa thành công!');
