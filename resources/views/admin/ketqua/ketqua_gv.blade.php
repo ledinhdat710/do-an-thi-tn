@@ -45,13 +45,13 @@
         </div>
         <div class="col-md-2">
             <label>Xếp loại</label>
-            <select class="from-control nhaploai-search" name="xeploai" style="margin-right:5px"  placeholder="{{ session()->get('xeploai') }} ">
-                <option value="Tất cả">Tất cả</option>
-                <option value="Yếu">Yếu</option>
-                <option value="Trung bình">Trung bình</option>
-                <option value="TB khá">TB khá</option>
-                <option value="Khá">Khá</option>
-                <option value="Giỏi">Giỏi</option>
+            <select class="from-control nhaploai-search" name="xeploai" style="margin-right:5px">
+                <option value="Tất cả" {{ session()->get('xeploai') == 'Tất cả' ? 'selected' :'' }}>Tất cả</option>
+                <option value="Yếu" {{ session()->get('xeploai') == 'Yếu' ? 'selected' :'' }}>Yếu</option>
+                <option value="Trung bình" {{ session()->get('xeploai') == 'Trung bình' ? 'selected' :'' }}>Trung bình</option>
+                <option value="TB khá" {{ session()->get('xeploai') == 'TB khá' ? 'selected' :'' }}>TB khá</option>
+                <option value="Khá" {{ session()->get('xeploai') == 'Khá' ? 'selected' :'' }}>Khá</option>
+                <option value="Giỏi" {{ session()->get('xeploai') == 'Giỏi' ? 'selected' :'' }}>Giỏi</option>
             </select>
         </div>
         <div class="col-md-12" style="text-align:center; margin-top:15px">
