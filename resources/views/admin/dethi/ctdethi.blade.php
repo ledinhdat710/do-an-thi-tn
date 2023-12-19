@@ -5,11 +5,11 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.js"></script>
 <style>
 	.chitietdethi {
-		/*border: 1px solid #000;*/
+		/* border: 1px solid #000; */
 		text-align: center;
 		margin-top: 0px;
 		margin-bottom: 50px;
-		width: 700px;
+		/* width: 500px; */
 		font-family: "Times New Roman", Times, serif;
 	}
 

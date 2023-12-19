@@ -36,7 +36,7 @@ class KetQuaController extends Controller
 		// }
 
 		// dd($ketqua);
-		return view('admin.ketqua.ketqua', ['ketqua' => $ketqua, 'xeploai' => $xeploai]);
+		return view('admin.ketqua.ketqua', ['ketqua' => $ketqua]);
 	}
 
 	public function ketquathi_gv()
@@ -119,23 +119,23 @@ class KetQuaController extends Controller
 			->join('kythi', 'kythi.id_ky', 'dethi.id_ky')->get()->toArray();
 		$diem = DB::table('ketqua')->pluck('diem');
 		// dd($diem[0]);
-		$xeploai = '';
-		if ($diem[0] < 5) {
-			$xeploai = 'Yếu';
-		} elseif ($diem[0] == 5) {
-			$xeploai = 'Trung bình';
-		} elseif ($diem[0] == 6) {
-			$xeploai = 'TB Khá';
-		} elseif ($diem[0] == 7) {
-			$xeploai = 'Khá';
-		} elseif ($diem[0] >= 8) {
-			$xeploai = 'Giỏi';
-		}
+		// $xeploai = '';
+		// if ($diem[0] < 5) {
+		// 	$xeploai = 'Yếu';
+		// } elseif ($diem[0] == 5) {
+		// 	$xeploai = 'Trung bình';
+		// } elseif ($diem[0] == 6) {
+		// 	$xeploai = 'TB Khá';
+		// } elseif ($diem[0] == 7) {
+		// 	$xeploai = 'Khá';
+		// } elseif ($diem[0] >= 8) {
+		// 	$xeploai = 'Giỏi';
+		// }
 
 		// dd($ketqua);
 		// return view('admin.ketqua.ketqua_gv',['ketqua'=>$ketqua, 'xeploai'=>$xeploai]);
 
-		$pdf = PDF::loadView('admin.ketqua.ketquaExportPDF', compact('ketqua', 'xeploai'));
+		$pdf = PDF::loadView('admin.ketqua.ketquaExportPDF', compact('ketqua'));
 		$pdf->save(storage_path() . '_filename.pdf');
 		return $pdf->download('ketqua.pdf');
 	}
@@ -153,20 +153,20 @@ class KetQuaController extends Controller
 			// ->get()->toArray();
 			->paginate(10);
 			
-		$diem = DB::table('ketqua')->pluck('diem');
-		$xeploai = '';
-		if ($diem[0] < 5) {
-			$xeploai = 'Yếu';
-		} elseif ($diem[0] == 5) {
-			$xeploai = 'Trung bình';
-		} elseif ($diem[0] == 6) {
-			$xeploai = 'TB Khá';
-		} elseif ($diem[0] == 7) {
-			$xeploai = 'Khá';
-		} elseif ($diem[0] >= 8) {
-			$xeploai = 'Giỏi';
-		}
-		return view('admin.layout.ketquathi', ['ketqua' => $ketqua, 'xeploai' => $xeploai]);
+		// $diem = DB::table('ketqua')->pluck('diem');
+		// $xeploai = '';
+		// if ($diem[0] < 5) {
+		// 	$xeploai = 'Yếu';
+		// } elseif ($diem[0] == 5) {
+		// 	$xeploai = 'Trung bình';
+		// } elseif ($diem[0] == 6) {
+		// 	$xeploai = 'TB Khá';
+		// } elseif ($diem[0] == 7) {
+		// 	$xeploai = 'Khá';
+		// } elseif ($diem[0] >= 8) {
+		// 	$xeploai = 'Giỏi';
+		// }
+		return view('admin.layout.ketquathi', ['ketqua' => $ketqua]);
 	
 	}
 }

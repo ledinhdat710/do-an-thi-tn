@@ -14,6 +14,7 @@
 			width: 700px;
 			/*font-family: "Times New Roman", Times, serif;*/
 			border: 1px solid #000;
+			font-family: "Times New Roman", Times, serif;
 		}
 
 		.head h4,
@@ -67,15 +68,18 @@
 			font-weight: bold;
 			margin-top: -30px;
 			margin-left: 500px;
+			width: 100px;
 
 		}
 
 		.noidungdethi {
 			margin-bottom: 30px;
+			font-family: "Times New Roman", Times, serif;
 		}
 
 		.cauhoidethi {
 			margin-top: 10px;
+			float:left;
 		}
 
 		.noidungdethi .tieudecauhoi {
@@ -93,12 +97,16 @@
 
 		.noidungchitietcauhoi {
 			font-size: 16px;
-			margin-left: -108px;
+			margin-left: 10px;
+			/* float:left; */
 		}
 
 		.tendapan {
 			font-weight: bold;
-			margin-right: 5px;
+			/* margin-right: 5px; */
+			/* margin-left: -400px; */
+			
+
 		}
 
 		.ketthucdethi {
@@ -116,13 +124,17 @@
 			text-align: left;
 			font-size: 16px;
 			margin-left: 45px;
+			
 		}
 
 		.noidungchitietcauhoi div {
 			display: inline;
-			margin-right: 30px;
+			/* margin-right: 30px; */
 			margin-top: 10px;
 			margin-bottom: 10px;
+			margin-left: -400px;
+			float:left;
+			
 		}
 
 		span p {
@@ -135,6 +147,7 @@
 
 		.classthongtin {
 			margin-top: -20px;
+			/* width: 100px; */
 		}
 	</style>
 </head>
@@ -169,7 +182,8 @@
 			</div>
 			<div class="row noidungdethi">
 				{{-- duyệt mãng ctđề thi --}}
-				@for($i =0; $i<count($ctdethi);$i++) <div class="cauhoidethi">
+				@for($i =0; $i<count($ctdethi);$i++) 
+				<div class="cauhoidethi">
 					<div class="row">
 						<div class="col-md-2"></div>
 						<div class="col-md-10 tieudecauhoi">
@@ -198,7 +212,7 @@
 						<div class="col-md-2"></div>
 					</div>
 					<div class="col-md-2"></div>
-					<div class="col-md-10 dapantrongch"> <b>Answer: </b>
+					<!-- <div class="col-md-10 dapantrongch"> <b>Answer: </b>
 						@foreach($dapan as $item)
 						{{-- lây ra id_cau hỏi của từng câu so sánh với tất cả các id câu hoi trong dap án --}}
 						{{-- nếu trùng id_câu hỏi thì in ra đap an --}}
@@ -206,7 +220,7 @@
 						{{$item->noidung}}
 						@endif
 						@endforeach
-					</div>
+					</div> -->
 			</div>
 
 			@endfor

@@ -12,7 +12,7 @@
 			margin-top: 20px;
 			margin-bottom: 50px;
 			width: 700px;
-			/*font-family: "Times New Roman", Times, serif;*/
+			font-family: "Times New Roman", Times, serif;
 			border: 1px solid #000;
 		}
 
@@ -150,6 +150,7 @@
 			margin-bottom: 10px;
 			font-weight: bold;
 			font-size: 20px;
+			font-family: "Times New Roman", Times, serif;
 		}
 
 		.namhoc {
@@ -157,11 +158,12 @@
 		}
 
 		table {
-			font-family: Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
+			/* font-family: Roboto, Helvetica Neue, Helvetica, Arial, sans-serif; */
 			border-collapse: collapse;
 			width: 650px;
 			margin-left: 5px;
 			margin-bottom: 50px;
+			font-family: "Times New Roman", Times, serif;
 		}
 
 		td,
@@ -184,7 +186,7 @@
 				<div class="row">
 					<div class="col-md-1"></div>
 					<div class="col-md-4 coso" >
-						<h4 class="">HỆ THỐNG QUẢN LÝ THI TRẮC NGHIỆM</h4>
+						<h4 class="dechinhthuc" >HỆ THỐNG QUẢN LÝ THI TRẮC NGHIỆM</h4>
 
 						<h5 class="dechinhthuc">EDUQUIZZ</h5>
 						<p class="under_gach"></p>

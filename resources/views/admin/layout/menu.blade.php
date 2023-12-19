@@ -24,10 +24,10 @@
 			<img src="imgs/user/face25.png" alt="" width="35" height="35">
 			{{Auth::user()->name}} <i class="fas fa-sort-down checklichsu"></i>
 			@endif
-			<div class="menunguoidung">
+			<!-- <div class="menunguoidung">
 				<p><a href="{{url('lichsu')}}"><b>Lịch Sử Bài Thi</b> <i class="fas fa-chevron-right"></i></a></p>
 
-			</div>
+			</div> -->
 		</div>
 		@if(Auth::check() && Auth::user()->doituong==0)
 		<div class="col-md-2">
