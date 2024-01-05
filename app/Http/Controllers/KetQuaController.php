@@ -160,10 +160,11 @@ class KetQuaController extends Controller
 
 		echo ($id);
 		$ketqua = DB::table('ketqua')
-			->join('hocsinh', 'hocsinh.id_hs', 'ketqua.id_hs', 'hocsinh.id')
+			->join('hocsinh', 'hocsinh.id', 'ketqua.id_hs', 'hocsinh.id')
 			->join('dethi', 'dethi.id_de', 'ketqua.id_de')
 			->join('monthi', 'monthi.id_mh', 'dethi.id_mh')
 			->join('kythi', 'kythi.id_ky', 'dethi.id_ky')->where('ketqua.id_hs', '=', $id)
+			
 			// ->get()->toArray();
 			->paginate(10);
 

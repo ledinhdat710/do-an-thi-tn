@@ -156,6 +156,7 @@
 
 				<li><a href="{{url('gioithieu')}}">GIỚI THIỆU </a></li>
 				<!-- <li><input type="text" class="timkiem" placeholder="  Tìm kiếm"> <i class="fas fa-search"></i></li> -->
+				
 				<li style="float:right;">
 					<form method="get" id="searchform" action="search">
 						<div class="email-box">

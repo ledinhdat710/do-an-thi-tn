@@ -89,7 +89,7 @@
                         <td>{{$kq->ngaysinh}}</td>
                         <td>{{$kq->diem}}</td>
                         <td>{{$kq->xeploai}}</td>
-                        <td>{{$kq->created_at}}</td>
+                        <td>{{$kq->ngaythi}}</td>
                     </tr>
                 <?php endforeach ?>
             </tbody>
